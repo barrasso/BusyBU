@@ -18,12 +18,6 @@
 
 #pragma mark - Lifecycle
 
-- (void)dealloc
-{
-    // Remove table view delegate when this class is deallocated
-    [_tableView setTarget:nil selector:nil];
-}
-
 - (void)didLoadFromCCB
 {
     // Enable touches
@@ -31,6 +25,12 @@
     
     // Sets up the main table view
     [self setupTableView];
+}
+
+- (void)dealloc
+{
+    // Remove table view delegate when this class is deallocated
+    [_tableView setTarget:nil selector:nil];
 }
 
 #pragma mark - CCTableViewDataSource Protocol
@@ -46,7 +46,7 @@
     // Set Content Size and type
 	_tableView.contentSizeType = CCSizeTypeNormalized;
 	_tableView.contentSize = CGSizeMake(1.f, 1.f);
-    
+v
     // Set table view as the data source
     _tableView.dataSource = self;
 }
@@ -59,17 +59,18 @@
     // Load a PlaceCell
     PlaceCell *cellContent = (PlaceCell *)[CCBReader load:@"PlaceCell"];
     
-    // Set the label
-    cellContent.placeLabel.string = @"Place";
+    // Set the cell's label
+    cellContent.placeLabel.string = @"Placeholder";
     
-    // Set the color
-//    cellContent.placeColor.color = ;
+    // Set the cell's color
+    cellContent.placeColor.color = [CCColor blueColor];
     
     // Add cellContent to cell
     [cell addChild:cellContent];
     cell.contentSizeType = CCSizeTypeMake(CCSizeUnitNormalized, CCSizeUnitPoints);
     cell.contentSize = CGSizeMake(1.f, 50.f);
 	
+    // Returns the cell
 	return cell;
 }
 
@@ -82,6 +83,7 @@
 // This method is called automatically by the CCTableView to create cells
 - (NSUInteger) tableViewNumberOfRows:(CCTableView*) tableView
 {
+    // Change to the count of the places array
 	return 5;
 }
 
