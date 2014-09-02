@@ -148,7 +148,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>Place Labe</string>
+				<string>Place Label</string>
 				<key>memberVarAssignmentName</key>
 				<string>_placeLabel</string>
 				<key>memberVarAssignmentType</key>
@@ -344,6 +344,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
