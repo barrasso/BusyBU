@@ -46,7 +46,7 @@
     // Set Content Size and type
 	_tableView.contentSizeType = CCSizeTypeNormalized;
 	_tableView.contentSize = CGSizeMake(1.f, 1.f);
-v
+    
     // Set table view as the data source
     _tableView.dataSource = self;
 }
