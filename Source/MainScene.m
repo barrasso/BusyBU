@@ -47,9 +47,6 @@
 	_tableView.contentSizeType = CCSizeTypeNormalized;
 	_tableView.contentSize = CGSizeMake(1.f, 1.f);
     
-    // Call table view cell selected
-//	[_tableView setTarget:self selector:@selector(tableViewCellSelected:)];
-    
     // Set table view as the data source
     _tableView.dataSource = self;
 }
@@ -59,8 +56,14 @@
 {
     CCTableViewCell *cell = [[CCTableViewCell alloc] init];
 	   
-    // Load a PlaceCell content
+    // Load a PlaceCell
     PlaceCell *cellContent = (PlaceCell *)[CCBReader load:@"PlaceCell"];
+    
+    // Set the label
+    cellContent.placeLabel.string = @"Place";
+    
+    // Set the color
+//    cellContent.placeColor.color = ;
     
     // Add cellContent to cell
     [cell addChild:cellContent];
