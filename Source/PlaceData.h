@@ -14,7 +14,7 @@
 
 @interface PlaceData : NSObject
 
-// Return array of all places
+// Returns array of all places
 + (NSArray *)allPlaces;
 
 @end

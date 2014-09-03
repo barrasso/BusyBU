@@ -31,10 +31,15 @@
     // Init array to hold all cells
     _allCells = [[NSMutableArray alloc] init];
     
-    // Add all place data to allCells array
+    // Create place objects and add them to allCells array
     for (NSMutableDictionary *placeData in [PlaceData allPlaces])
     {
+        // Init place object with place data
         PlaceObject *place = [[PlaceObject alloc] initWithData:placeData];
+        
+        // Find people at location per place here
+        
+        // Add to allCells array
         [_allCells addObject:place];
     }
     
@@ -81,6 +86,10 @@
     // Set the cell's label
     cellContent.placeLabel.string = place.name;
     
+    // Determine the place's status
+    //if (place.peopleAtLocation >= 10)
+    //place.status = @"MILD";
+    
     // Set the cell's color
     // BUSY = Red Color
     // MILD = Yellow Color
@@ -94,6 +103,8 @@
     
     // Add cellContent to cell
     [cell addChild:cellContent];
+    
+    // Set the cell's content size and type
     cell.contentSizeType = CCSizeTypeMake(CCSizeUnitNormalized, CCSizeUnitPoints);
     cell.contentSize = CGSizeMake(1.f, 50.f);
 	
@@ -110,7 +121,7 @@
 // This method is called automatically by the CCTableView to create cells
 - (NSUInteger) tableViewNumberOfRows:(CCTableView*) tableView
 {
-    // Returns total amount of places
+    // Returns total amount of places in allCells array
 	return [_allCells count];
 }
 

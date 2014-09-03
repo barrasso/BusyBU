@@ -11,6 +11,8 @@
 
 @implementation PlaceObject
 
+#pragma mark - Initialization
+
 - (id)init
 {
     self = [self initWithData:nil];

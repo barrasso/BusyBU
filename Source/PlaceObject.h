@@ -22,7 +22,7 @@
 // Amount of People at Place
 @property (nonatomic, assign) NSInteger peopleAtLocation;
 
-// Init with data
+// Init with place data
 - (id)initWithData:(NSDictionary *)data;
 
 @end
