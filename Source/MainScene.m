@@ -88,18 +88,18 @@
     
     // Determine the place's status
     //if (place.peopleAtLocation >= 10)
-    //place.status = @"MILD";
+    //place.status = @"BUSY";
     
     // Set the cell's color
     // BUSY = Red Color
     // MILD = Yellow Color
     // OPEN = Green Color
     if ([place.status isEqualToString:@"BUSY"])
-        cellContent.placeColor.color = [CCColor redColor];
+        cellContent.placeColor.color = [CCColor colorWithRed:0.6f green:0.f blue:0.f];
     else if ([place.status isEqualToString:@"MILD"])
-        cellContent.placeColor.color = [CCColor yellowColor];
+        cellContent.placeColor.color = [CCColor colorWithRed:0.f green:0.f blue:0.6f];
     else
-        cellContent.placeColor.color = [CCColor greenColor];
+        cellContent.placeColor.color = [CCColor colorWithRed:0.f green:0.6f blue:0.f];
     
     // Add cellContent to cell
     [cell addChild:cellContent];
