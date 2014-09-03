@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		043D51C719B41A41003589AC /* PlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D51C619B41A41003589AC /* PlaceCell.m */; };
+		043D51F919B664C9003589AC /* PlaceData.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D51F819B664C9003589AC /* PlaceData.m */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -59,6 +60,8 @@
 /* Begin PBXFileReference section */
 		043D51C519B41A41003589AC /* PlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceCell.h; path = Source/PlaceCell.h; sourceTree = "<group>"; };
 		043D51C619B41A41003589AC /* PlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceCell.m; path = Source/PlaceCell.m; sourceTree = "<group>"; };
+		043D51F719B664C9003589AC /* PlaceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceData.h; path = Source/PlaceData.h; sourceTree = "<group>"; };
+		043D51F819B664C9003589AC /* PlaceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceData.m; path = Source/PlaceData.m; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -144,6 +147,15 @@
 			name = Nodes;
 			sourceTree = "<group>";
 		};
+		043D51F619B664AF003589AC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				043D51F719B664C9003589AC /* PlaceData.h */,
+				043D51F819B664C9003589AC /* PlaceData.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		9222E2B918734FF800A246C7 /* libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +167,7 @@
 		B737893C1807616C0076A88C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				043D51F619B664AF003589AC /* Data */,
 				043D51C419B41A20003589AC /* Nodes */,
 				043D51C319B41A1A003589AC /* Scenes */,
 				043D51C119B41A12003589AC /* Delegate */,
@@ -372,6 +385,7 @@
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
+				043D51F919B664C9003589AC /* PlaceData.m in Sources */,
 				043D51C719B41A41003589AC /* PlaceCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

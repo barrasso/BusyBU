@@ -1,9 +1,9 @@
 //
 //  MainScene.h
-//  PROJECTNAME
+//  WHATS BUSY
 //
-//  Created by Viktor on 10/10/13.
-//  Copyright (c) 2013 Apportable. All rights reserved.
+//  Created by Mrk on 09/01/14.
+//  Copyright (c) 2014 Mark Barrasso. All rights reserved.
 //
 
 #import "CCNode.h"
