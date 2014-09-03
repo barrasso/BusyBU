@@ -45,6 +45,8 @@
     
     // Sets up the main table view
     [self setupTableView];
+    
+    [CCEffectBlur effectWithBlurRadius:100];
 }
 
 - (void)dealloc
@@ -85,21 +87,25 @@
     
     // Set the cell's label
     cellContent.placeLabel.string = place.name;
-    
+        
     // Determine the place's status
-    //if (place.peopleAtLocation >= 10)
-    //place.status = @"BUSY";
+    if (place.peopleAtLocation >= 10)
+        place.status = @"BUSY";
+    else if (place.peopleAtLocation >= 5)
+        place.status = @"MILD";
+    else
+        place.status = @"OPEN";
     
     // Set the cell's color
-    // BUSY = Red Color
-    // MILD = Yellow Color
-    // OPEN = Green Color
+    // BUSY = Red
+    // MILD = Blue
+    // OPEN = Green
     if ([place.status isEqualToString:@"BUSY"])
-        cellContent.placeColor.color = [CCColor colorWithRed:0.6f green:0.f blue:0.f];
+        cellContent.placeColor.color = [CCColor colorWithRed:0.5f green:0.f blue:0.f];
     else if ([place.status isEqualToString:@"MILD"])
-        cellContent.placeColor.color = [CCColor colorWithRed:0.f green:0.f blue:0.6f];
+        cellContent.placeColor.color = [CCColor colorWithRed:0.f green:0.f blue:0.5f];
     else
-        cellContent.placeColor.color = [CCColor colorWithRed:0.f green:0.6f blue:0.f];
+        cellContent.placeColor.color = [CCColor colorWithRed:0.f green:0.5f blue:0.f];
     
     // Add cellContent to cell
     [cell addChild:cellContent];

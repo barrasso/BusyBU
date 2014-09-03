@@ -11,6 +11,7 @@
 #define PLACE_NAME @"Place Name"
 #define PLACE_STATUS @"Place Status"
 #define PLACE_LOCATION @"Place Location"
+#define PLACE_POPULATION @"0"
 
 @interface PlaceData : NSObject
 

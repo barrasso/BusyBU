@@ -28,6 +28,7 @@
     self.name = data[PLACE_NAME];
     self.status = data[PLACE_STATUS];
     self.location = data[PLACE_LOCATION];
+    self.peopleAtLocation = [data[PLACE_POPULATION] intValue];
     
     return self;
 }
