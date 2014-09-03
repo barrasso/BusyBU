@@ -9,6 +9,7 @@
 #import "MainScene.h"
 #import "PlaceCell.h"
 #import "PlaceData.h"
+#import "PlaceObject.h"
 
 @implementation MainScene
 {
@@ -31,7 +32,11 @@
     _allCells = [[NSMutableArray alloc] init];
     
     // Add all place data to allCells array
-    [_allCells addObjectsFromArray:[PlaceData allPlaces]];
+    for (NSMutableDictionary *placeData in [PlaceData allPlaces])
+    {
+        PlaceObject *place = [[PlaceObject alloc] initWithData:placeData];
+        [_allCells addObject:place];
+    }
     
     // Sets up the main table view
     [self setupTableView];
@@ -68,16 +73,24 @@
     CCTableViewCell *cell = [[CCTableViewCell alloc] init];
 	   
     // Current cell represents a place
-    NSDictionary *currentPlace = _allCells[index];
+    PlaceObject *place = [_allCells objectAtIndex:index];
     
     // Load a PlaceCell
     PlaceCell *cellContent = (PlaceCell *)[CCBReader load:@"PlaceCell"];
     
     // Set the cell's label
-    cellContent.placeLabel.string = currentPlace[@"Place Name"];
+    cellContent.placeLabel.string = place.name;
     
     // Set the cell's color
-    cellContent.placeColor.color = [CCColor blueColor];
+    // BUSY = Red Color
+    // MILD = Yellow Color
+    // OPEN = Green Color
+    if ([place.status isEqualToString:@"BUSY"])
+        cellContent.placeColor.color = [CCColor redColor];
+    else if ([place.status isEqualToString:@"MILD"])
+        cellContent.placeColor.color = [CCColor yellowColor];
+    else
+        cellContent.placeColor.color = [CCColor greenColor];
     
     // Add cellContent to cell
     [cell addChild:cellContent];

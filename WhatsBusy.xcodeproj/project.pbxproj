@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0405C5F719B7B274003819A8 /* PlaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0405C5F619B7B274003819A8 /* PlaceObject.m */; };
 		043D51C719B41A41003589AC /* PlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D51C619B41A41003589AC /* PlaceCell.m */; };
 		043D51F919B664C9003589AC /* PlaceData.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D51F819B664C9003589AC /* PlaceData.m */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
@@ -58,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0405C5F519B7B274003819A8 /* PlaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceObject.h; path = Source/PlaceObject.h; sourceTree = "<group>"; };
+		0405C5F619B7B274003819A8 /* PlaceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceObject.m; path = Source/PlaceObject.m; sourceTree = "<group>"; };
 		043D51C519B41A41003589AC /* PlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceCell.h; path = Source/PlaceCell.h; sourceTree = "<group>"; };
 		043D51C619B41A41003589AC /* PlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceCell.m; path = Source/PlaceCell.m; sourceTree = "<group>"; };
 		043D51F719B664C9003589AC /* PlaceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceData.h; path = Source/PlaceData.h; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 			children = (
 				043D51F719B664C9003589AC /* PlaceData.h */,
 				043D51F819B664C9003589AC /* PlaceData.m */,
+				0405C5F519B7B274003819A8 /* PlaceObject.h */,
+				0405C5F619B7B274003819A8 /* PlaceObject.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0405C5F719B7B274003819A8 /* PlaceObject.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,

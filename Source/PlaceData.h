@@ -14,9 +14,7 @@
 
 @interface PlaceData : NSObject
 
-// All Places
-@property (nonatomic, strong) NSMutableArray *allPlaces;
-
+// Return array of all places
 + (NSArray *)allPlaces;
 
 @end
