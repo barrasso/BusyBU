@@ -44,9 +44,7 @@
     }
     
     // Sets up the main table view
-    [self setupTableView];
-    
-    [CCEffectBlur effectWithBlurRadius:100];
+    [self setupTableView];    
 }
 
 - (void)dealloc
@@ -87,7 +85,7 @@
     
     // Set the cell's label
     cellContent.placeLabel.string = place.name;
-        
+    
     // Determine the place's status
     if (place.peopleAtLocation >= 10)
         place.status = @"BUSY";
