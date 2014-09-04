@@ -44,7 +44,7 @@
     }
     
     // Sets up the main table view
-    [self setupTableView];    
+    [self setupTableView];
 }
 
 - (void)dealloc
@@ -110,7 +110,7 @@
     
     // Set the cell's content size and type
     cell.contentSizeType = CCSizeTypeMake(CCSizeUnitNormalized, CCSizeUnitPoints);
-    cell.contentSize = CGSizeMake(1.f, 50.f);
+    cell.contentSize = CGSizeMake(1.f, 100.f);
 	
     // Returns the cell
 	return cell;
@@ -119,7 +119,7 @@
 // This method is called automatically by the CCTableView to create cells
 - (float) tableView:(CCTableView*)tableView heightForRowAtIndex:(NSUInteger) index
 {
-	return 50;
+	return 100;
 }
 
 // This method is called automatically by the CCTableView to create cells
