@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+// Place Keys
 #define PLACE_NAME @"Place Name"
 #define PLACE_STATUS @"Place Status"
 #define PLACE_LOCATION @"Place Location"
