@@ -129,4 +129,11 @@
 	return [_allCells count];
 }
 
+#pragma mark - Selectors
+
+- (void)refresh
+{
+    // Refresh list when clicked
+}
+
 @end
