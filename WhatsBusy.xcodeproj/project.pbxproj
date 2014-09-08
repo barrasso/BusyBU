@@ -10,6 +10,7 @@
 		0405C5F719B7B274003819A8 /* PlaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0405C5F619B7B274003819A8 /* PlaceObject.m */; };
 		043D51C719B41A41003589AC /* PlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D51C619B41A41003589AC /* PlaceCell.m */; };
 		043D51F919B664C9003589AC /* PlaceData.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D51F819B664C9003589AC /* PlaceData.m */; };
+		04D74A2F19BE030D004E4761 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D74A2E19BE030D004E4761 /* CoreLocation.framework */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -65,6 +66,7 @@
 		043D51C619B41A41003589AC /* PlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceCell.m; path = Source/PlaceCell.m; sourceTree = "<group>"; };
 		043D51F719B664C9003589AC /* PlaceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceData.h; path = Source/PlaceData.h; sourceTree = "<group>"; };
 		043D51F819B664C9003589AC /* PlaceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceData.m; path = Source/PlaceData.m; sourceTree = "<group>"; };
+		04D74A2E19BE030D004E4761 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D74A2F19BE030D004E4761 /* CoreLocation.framework in Frameworks */,
 				8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */,
 				B737898A1807642B0076A88C /* libcocos2d.a in Frameworks */,
 				B77F1B3217B978D7009739AE /* QuartzCore.framework in Frameworks */,
@@ -232,6 +235,7 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04D74A2E19BE030D004E4761 /* CoreLocation.framework */,
 				8392007918EE8E3300B6C429 /* GLKit.framework */,
 				B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */,
 				B77F1B3117B978D7009739AE /* QuartzCore.framework */,

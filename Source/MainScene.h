@@ -7,7 +7,8 @@
 //
 
 #import "CCNode.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface MainScene : CCNode <CCTableViewDataSource>
+@interface MainScene : CCNode <CCTableViewDataSource, CLLocationManagerDelegate>
 
 @end

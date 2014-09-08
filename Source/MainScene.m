@@ -19,6 +19,9 @@
     
     // All Places
     NSMutableArray *_allCells;
+    
+    // Location Manager
+    CLLocationManager *locationManager;
 }
 
 #pragma mark - Lifecycle
@@ -27,6 +30,12 @@
 {
     // Enable touches
     self.userInteractionEnabled = YES;
+    
+    // Init location manager
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
     
     // Init array to hold all cells
     _allCells = [[NSMutableArray alloc] init];
@@ -134,6 +143,27 @@
 - (void)refresh
 {
     // Refresh list when clicked
+}
+
+#pragma mark - CLLocationManager Delegate
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError: %@", error);
+    UIAlertView *errorAlert = [[UIAlertView alloc]
+                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"didUpdateToLocation: %@", newLocation);
+    CLLocation *currentLocation = newLocation;
+    
+    if (currentLocation != nil) {
+        CCLOG(@"Latitude: %f",currentLocation.coordinate.latitude);
+        CCLOG(@"Longitude: %f",currentLocation.coordinate.longitude);
+    }
 }
 
 @end
