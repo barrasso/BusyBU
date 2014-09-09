@@ -11,4 +11,10 @@
 
 @interface MainScene : CCNode <CCTableViewDataSource, CLLocationManagerDelegate>
 
+// Boolean flag to check if popup is open
+@property (nonatomic, assign) BOOL isPopupOpen;
+
+// Toggle boolean flag
+- (void)togglePopupBool;
+
 @end

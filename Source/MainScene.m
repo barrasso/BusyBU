@@ -7,15 +7,19 @@
 //
 
 #import "MainScene.h"
+#import "InfoPopup.h"
 #import "PlaceCell.h"
 #import "PlaceData.h"
 #import "PlaceObject.h"
 
 @implementation MainScene
-{
+{    
     // Table View
     CCTableView *_tableView;
     CCNode *_tableViewNode;
+    
+    // Popup
+    CCNode *currentPopup;
     
     // All Places
     NSMutableArray *_allCells;
@@ -76,6 +80,9 @@
 	_tableView.contentSizeType = CCSizeTypeNormalized;
 	_tableView.contentSize = CGSizeMake(1.f, 1.f);
     
+    // Call table view cell selected
+	[_tableView setTarget:self selector:@selector(tableViewCellSelected:)];
+    
     // Set table view as the data source
     _tableView.dataSource = self;
 }
@@ -103,10 +110,12 @@
     else
         place.status = @"OPEN";
     
-    // Set the cell's color
-    // BUSY = Red
-    // MILD = Blue
-    // OPEN = Green
+    /* 
+     Set the cell's color
+     * BUSY = Red
+     * MILD = Blue
+     * OPEN = Green
+     */
     if ([place.status isEqualToString:@"BUSY"])
         cellContent.placeColor.color = [CCColor colorWithRed:0.5f green:0.f blue:0.f];
     else if ([place.status isEqualToString:@"MILD"])
@@ -136,6 +145,56 @@
 {
     // Returns total amount of places in allCells array
 	return [_allCells count];
+}
+
+// This method is called automatically by the CCTableView when cells are tapped
+- (void)tableViewCellSelected:(CCTableViewCell*)sender
+{
+    // Get the index
+	NSInteger index = _tableView.selectedRow;
+    
+    // Current cell represents a place
+    PlaceObject *place = [_allCells objectAtIndex:index];
+    
+    // Check if a popup is already open
+    if (self.isPopupOpen) {
+        
+        // If it is, close it
+        [self removeChild:currentPopup];
+        
+        // Toggle isPopupOpen state
+        [self togglePopupBool];
+    }
+    
+    // If a popup is not already open
+    else
+    {    // Load the place's popup
+        InfoPopup *infoPopup = (InfoPopup *)[CCBReader load:@"InfoPopup"];
+        
+        // Then position and initalize the popup
+        infoPopup.positionType = CCPositionTypeNormalized;
+        infoPopup.position = ccp(0.5,0.5);
+        infoPopup.placeNameLabel.string = place.name;
+        
+        // Then set boolean flag to true
+        [self togglePopupBool];
+        
+        // Then add popup as child to main scene
+        [self addChild:infoPopup];
+        
+        // Add as current popup
+        currentPopup = infoPopup;
+    }
+}
+
+#pragma mark - Helper Methods
+
+- (void)togglePopupBool
+{
+    if (self.isPopupOpen)
+        self.isPopupOpen = NO;
+    else
+        self.isPopupOpen = YES;
 }
 
 #pragma mark - Selectors

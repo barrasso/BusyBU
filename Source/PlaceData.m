@@ -18,21 +18,21 @@
     /* Student Utilities */
     
     // FitRec
-    NSDictionary *fitrecInfo = @{PLACE_NAME : @"FITREC", PLACE_STATUS : @"STATUS", PLACE_LOCATION : @"COORDS", PLACE_POPULATION : @"0"};
+    NSDictionary *fitrecInfo = @{PLACE_NAME : @"FITREC", PLACE_STATUS : @"STATUS", PLACE_LOCATION : @"COORDS", PLACE_POPULATION : @"10"};
     [placeInfo addObject:fitrecInfo];
     
     // GSU
-    NSDictionary *gsuInfo = @{PLACE_NAME : @"GSU", PLACE_STATUS : @"STATUS", PLACE_LOCATION : @"COORDS", PLACE_POPULATION : @"0"};
+    NSDictionary *gsuInfo = @{PLACE_NAME : @"GSU", PLACE_STATUS : @"STATUS", PLACE_LOCATION : @"COORDS", PLACE_POPULATION : @"10"};
     [placeInfo addObject:gsuInfo];
     
     /* Study Places */
     
     // Ingalls
-    NSDictionary *ingallsInfo = @{PLACE_NAME : @"INGALLS", PLACE_STATUS : @"STATUS", PLACE_LOCATION : @"COORDS", PLACE_POPULATION : @"0"};
+    NSDictionary *ingallsInfo = @{PLACE_NAME : @"INGALLS", PLACE_STATUS : @"STATUS", PLACE_LOCATION : @"COORDS", PLACE_POPULATION : @"5"};
     [placeInfo addObject:ingallsInfo];
     
     // Mugar Library
-    NSDictionary *mugarInfo = @{PLACE_NAME : @"MUGAR", PLACE_STATUS : @"STATUS", PLACE_LOCATION : @"COORDS", PLACE_POPULATION : @"0"};
+    NSDictionary *mugarInfo = @{PLACE_NAME : @"MUGAR", PLACE_STATUS : @"STATUS", PLACE_LOCATION : @"COORDS", PLACE_POPULATION : @"5"};
     [placeInfo addObject:mugarInfo];
     
     // Photonics

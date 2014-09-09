@@ -10,6 +10,7 @@
 		0405C5F719B7B274003819A8 /* PlaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0405C5F619B7B274003819A8 /* PlaceObject.m */; };
 		043D51C719B41A41003589AC /* PlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D51C619B41A41003589AC /* PlaceCell.m */; };
 		043D51F919B664C9003589AC /* PlaceData.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D51F819B664C9003589AC /* PlaceData.m */; };
+		0496164E19BF9C2F00E11E00 /* InfoPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0496164D19BF9C2F00E11E00 /* InfoPopup.m */; };
 		04D74A2F19BE030D004E4761 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D74A2E19BE030D004E4761 /* CoreLocation.framework */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
@@ -66,6 +67,8 @@
 		043D51C619B41A41003589AC /* PlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceCell.m; path = Source/PlaceCell.m; sourceTree = "<group>"; };
 		043D51F719B664C9003589AC /* PlaceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceData.h; path = Source/PlaceData.h; sourceTree = "<group>"; };
 		043D51F819B664C9003589AC /* PlaceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceData.m; path = Source/PlaceData.m; sourceTree = "<group>"; };
+		0496164C19BF9C2F00E11E00 /* InfoPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoPopup.h; path = Source/InfoPopup.h; sourceTree = "<group>"; };
+		0496164D19BF9C2F00E11E00 /* InfoPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoPopup.m; path = Source/InfoPopup.m; sourceTree = "<group>"; };
 		04D74A2E19BE030D004E4761 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 			children = (
 				043D51C519B41A41003589AC /* PlaceCell.h */,
 				043D51C619B41A41003589AC /* PlaceCell.m */,
+				0496164C19BF9C2F00E11E00 /* InfoPopup.h */,
+				0496164D19BF9C2F00E11E00 /* InfoPopup.m */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -396,6 +401,7 @@
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				043D51F919B664C9003589AC /* PlaceData.m in Sources */,
+				0496164E19BF9C2F00E11E00 /* InfoPopup.m in Sources */,
 				043D51C719B41A41003589AC /* PlaceCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
