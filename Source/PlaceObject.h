@@ -16,9 +16,6 @@
 // Place Status
 @property (nonatomic, strong) NSString *status;
 
-// Place Location
-@property (nonatomic, strong) NSString *location;
-
 // Amount of People at Place
 @property (nonatomic, assign) NSInteger peopleAtLocation;
 
