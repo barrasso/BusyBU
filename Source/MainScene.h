@@ -7,9 +7,8 @@
 //
 
 #import "CCNode.h"
-#import <CoreLocation/CoreLocation.h>
 
-@interface MainScene : CCNode <CCTableViewDataSource, CLLocationManagerDelegate>
+@interface MainScene : CCNode <CCTableViewDataSource>
 
 // Boolean flag to check if popup is open
 @property (nonatomic, assign) BOOL isPopupOpen;
