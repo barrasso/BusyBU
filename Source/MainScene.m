@@ -197,4 +197,9 @@
     // Refresh list when clicked
 }
 
+- (void)filter
+{
+    // Filter list
+}
+
 @end
