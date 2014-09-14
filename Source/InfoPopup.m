@@ -12,6 +12,26 @@
 
 #pragma mark - Selectors
 
+- (void)notBusy
+{
+    // Rate not busy
+}
+
+- (void)kindaBusy
+{
+    // Rate kinda busy
+}
+
+- (void)itsBusy
+{
+    // Rate it's busy
+}
+
+- (void)shareStatus
+{
+    // Share locations's status to friends
+}
+
 - (void)closePopup
 {
     // Closes the popup and removes from main scene
