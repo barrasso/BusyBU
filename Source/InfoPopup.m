@@ -14,17 +14,35 @@
 
 - (void)notBusy
 {
-    // Rate not busy
+    if (self.isOnCooldown) {
+        
+        // Rate NOT busy
+        
+        // Init rate cooldown
+        self.isOnCooldown = YES;
+    }
 }
 
 - (void)kindaBusy
 {
-    // Rate kinda busy
+    if (self.isOnCooldown) {
+    
+        // Rate KINDA busy
+    
+        // Init rate cooldown
+        self.isOnCooldown = YES;
+    }
 }
 
 - (void)itsBusy
 {
-    // Rate it's busy
+    if (self.isOnCooldown) {
+        
+        // Rate IT IS busy
+        
+        // Init rate cooldown
+        self.isOnCooldown = YES;
+    }
 }
 
 - (void)shareStatus
