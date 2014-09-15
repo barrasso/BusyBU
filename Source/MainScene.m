@@ -195,6 +195,10 @@
 - (void)refresh
 {
     // Refresh list when clicked
+//    CCScene *restartScene = [[[MainScene class] alloc] init];
+//    [[CCDirector sharedDirector] replaceScene:restartScene];
+    
+    [_tableView reloadData];
 }
 
 - (void)filter
