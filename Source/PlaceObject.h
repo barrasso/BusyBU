@@ -16,9 +16,6 @@
 // Place Status
 @property (nonatomic, strong) NSString *status;
 
-// Amount of People at Place
-@property (nonatomic, assign) NSInteger peopleAtLocation;
-
 // Init with place data
 - (id)initWithData:(NSDictionary *)data;
 

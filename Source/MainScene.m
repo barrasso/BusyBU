@@ -47,14 +47,14 @@
         // Add to allCells array
         [_allCells addObject:place];
     }
+
+    // Parse Test
+    PFObject *allPlacesArray = [PFObject objectWithClassName:@"AllPlaces"];
+    [allPlacesArray addObjectsFromArray:[PlaceData allPlaces] forKey:@"wat"];
+    [allPlacesArray saveInBackground];
     
     // Sets up the main table view
     [self setupTableView];
-    
-    // Parse Test
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
 }
 
 - (void)dealloc
@@ -98,14 +98,6 @@
     
     // Set the cell's label
     cellContent.placeLabel.string = place.name;
-    
-    // Determine the place's status
-    if (place.peopleAtLocation >= 10)
-        place.status = @"BUSY";
-    else if (place.peopleAtLocation >= 5)
-        place.status = @"MILD";
-    else
-        place.status = @"OPEN";
     
     /* 
      Set the cell's color

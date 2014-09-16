@@ -21,6 +21,9 @@
         // Init rate cooldown
         self.isOnCooldown = YES;
     }
+    
+    // Close after rating
+    [self closePopup];
 }
 
 - (void)kindaBusy
@@ -32,6 +35,9 @@
         // Init rate cooldown
         self.isOnCooldown = YES;
     }
+    
+    // Close after rating
+    [self closePopup];
 }
 
 - (void)itsBusy
@@ -43,6 +49,9 @@
         // Init rate cooldown
         self.isOnCooldown = YES;
     }
+    
+    // Close after rating
+    [self closePopup];
 }
 
 - (void)closePopup

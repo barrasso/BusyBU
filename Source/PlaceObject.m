@@ -27,7 +27,6 @@
     // Set place object's data
     self.name = data[PLACE_NAME];
     self.status = data[PLACE_STATUS];
-    self.peopleAtLocation = [data[PLACE_POPULATION] intValue];
     
     return self;
 }
