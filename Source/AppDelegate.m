@@ -26,6 +26,7 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "CCBuilderReader.h"
+#import <Parse/Parse.h>
 
 @implementation AppController
 
@@ -50,6 +51,15 @@
     [CCBReader configureCCFileUtils];
     
     // Do any extra configuration of Cocos2d here
+    
+    // Parse App ID
+    [Parse setApplicationId:@"3jtG8Je1R9VBqQqhnGing1lslWdVssxG8VwaB9Im"
+                  clientKey:@"AAJ2uU3vuHmqc8KThU0kE5Zml92BhKqJsZsw1E4F"];
+    
+    // Track statistics around application opens
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    // Cocos2d setup with options
     [self setupCocos2dWithOptions:cocos2dSetup];
     
     return YES;

@@ -45,11 +45,6 @@
     }
 }
 
-- (void)shareStatus
-{
-    // Share locations's status to friends
-}
-
 - (void)closePopup
 {
     // Closes the popup and removes from main scene

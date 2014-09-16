@@ -11,6 +11,7 @@
 #import "PlaceCell.h"
 #import "PlaceData.h"
 #import "PlaceObject.h"
+#import <Parse/Parse.h>
 
 @implementation MainScene
 {    
@@ -49,6 +50,11 @@
     
     // Sets up the main table view
     [self setupTableView];
+    
+    // Parse Test
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    testObject[@"foo"] = @"bar";
+    [testObject saveInBackground];
 }
 
 - (void)dealloc

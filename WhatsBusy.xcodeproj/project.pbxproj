@@ -10,6 +10,18 @@
 		0405C5F719B7B274003819A8 /* PlaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0405C5F619B7B274003819A8 /* PlaceObject.m */; };
 		043D51C719B41A41003589AC /* PlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D51C619B41A41003589AC /* PlaceCell.m */; };
 		043D51F919B664C9003589AC /* PlaceData.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D51F819B664C9003589AC /* PlaceData.m */; };
+		0491A4BF19C75C5000DE6076 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4BC19C75C5000DE6076 /* Bolts.framework */; };
+		0491A4C019C75C5000DE6076 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4BD19C75C5000DE6076 /* Parse.framework */; };
+		0491A4C419C75C7400DE6076 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4C319C75C7400DE6076 /* CFNetwork.framework */; };
+		0491A4C519C75C8500DE6076 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D74A2E19BE030D004E4761 /* CoreLocation.framework */; };
+		0491A4C719C75C9400DE6076 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4C619C75C9400DE6076 /* libz.dylib */; };
+		0491A4C919C75C9D00DE6076 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4C819C75C9D00DE6076 /* MobileCoreServices.framework */; };
+		0491A4CB19C75CAD00DE6076 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4CA19C75CAD00DE6076 /* Security.framework */; };
+		0491A4CD19C75CC200DE6076 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4CC19C75CC200DE6076 /* StoreKit.framework */; };
+		0491A4CF19C75CCA00DE6076 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4CE19C75CCA00DE6076 /* SystemConfiguration.framework */; };
+		0491A4D119C75D8800DE6076 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4D019C75D8800DE6076 /* Social.framework */; };
+		0491A4D319C75D9900DE6076 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4D219C75D9900DE6076 /* Twitter.framework */; };
+		0491A4D519C88F2C00DE6076 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4D419C88F2C00DE6076 /* Accounts.framework */; };
 		0496164E19BF9C2F00E11E00 /* InfoPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0496164D19BF9C2F00E11E00 /* InfoPopup.m */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
@@ -66,6 +78,17 @@
 		043D51C619B41A41003589AC /* PlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceCell.m; path = Source/PlaceCell.m; sourceTree = "<group>"; };
 		043D51F719B664C9003589AC /* PlaceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceData.h; path = Source/PlaceData.h; sourceTree = "<group>"; };
 		043D51F819B664C9003589AC /* PlaceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceData.m; path = Source/PlaceData.m; sourceTree = "<group>"; };
+		0491A4BC19C75C5000DE6076 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		0491A4BD19C75C5000DE6076 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		0491A4C319C75C7400DE6076 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0491A4C619C75C9400DE6076 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		0491A4C819C75C9D00DE6076 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		0491A4CA19C75CAD00DE6076 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0491A4CC19C75CC200DE6076 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0491A4CE19C75CCA00DE6076 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0491A4D019C75D8800DE6076 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		0491A4D219C75D9900DE6076 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		0491A4D419C88F2C00DE6076 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		0496164C19BF9C2F00E11E00 /* InfoPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoPopup.h; path = Source/InfoPopup.h; sourceTree = "<group>"; };
 		0496164D19BF9C2F00E11E00 /* InfoPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoPopup.m; path = Source/InfoPopup.m; sourceTree = "<group>"; };
 		04D74A2E19BE030D004E4761 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -110,11 +133,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0491A4D519C88F2C00DE6076 /* Accounts.framework in Frameworks */,
+				0491A4D319C75D9900DE6076 /* Twitter.framework in Frameworks */,
+				0491A4D119C75D8800DE6076 /* Social.framework in Frameworks */,
+				0491A4CF19C75CCA00DE6076 /* SystemConfiguration.framework in Frameworks */,
+				0491A4CD19C75CC200DE6076 /* StoreKit.framework in Frameworks */,
+				0491A4CB19C75CAD00DE6076 /* Security.framework in Frameworks */,
+				B77F1B3217B978D7009739AE /* QuartzCore.framework in Frameworks */,
+				0491A4C919C75C9D00DE6076 /* MobileCoreServices.framework in Frameworks */,
+				0491A4C719C75C9400DE6076 /* libz.dylib in Frameworks */,
+				0491A4C519C75C8500DE6076 /* CoreLocation.framework in Frameworks */,
+				0491A4C419C75C7400DE6076 /* CFNetwork.framework in Frameworks */,
 				8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */,
 				B737898A1807642B0076A88C /* libcocos2d.a in Frameworks */,
-				B77F1B3217B978D7009739AE /* QuartzCore.framework in Frameworks */,
+				0491A4BF19C75C5000DE6076 /* Bolts.framework in Frameworks */,
 				B77F1B3417B978D7009739AE /* OpenGLES.framework in Frameworks */,
 				B77F1B3617B978D7009739AE /* OpenAL.framework in Frameworks */,
+				0491A4C019C75C5000DE6076 /* Parse.framework in Frameworks */,
 				B77F1B3817B978D7009739AE /* AudioToolbox.framework in Frameworks */,
 				B77F1B3A17B978D7009739AE /* AVFoundation.framework in Frameworks */,
 				B77F1B3C17B978D7009739AE /* UIKit.framework in Frameworks */,
@@ -238,6 +273,17 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0491A4D419C88F2C00DE6076 /* Accounts.framework */,
+				0491A4D219C75D9900DE6076 /* Twitter.framework */,
+				0491A4D019C75D8800DE6076 /* Social.framework */,
+				0491A4CE19C75CCA00DE6076 /* SystemConfiguration.framework */,
+				0491A4CC19C75CC200DE6076 /* StoreKit.framework */,
+				0491A4CA19C75CAD00DE6076 /* Security.framework */,
+				0491A4C819C75C9D00DE6076 /* MobileCoreServices.framework */,
+				0491A4C619C75C9400DE6076 /* libz.dylib */,
+				0491A4C319C75C7400DE6076 /* CFNetwork.framework */,
+				0491A4BC19C75C5000DE6076 /* Bolts.framework */,
+				0491A4BD19C75C5000DE6076 /* Parse.framework */,
 				04D74A2E19BE030D004E4761 /* CoreLocation.framework */,
 				8392007918EE8E3300B6C429 /* GLKit.framework */,
 				B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */,
@@ -482,6 +528,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
@@ -515,6 +565,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				HEADER_SEARCH_PATHS = (
