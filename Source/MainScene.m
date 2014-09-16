@@ -42,16 +42,14 @@
         // Init place object with place data
         PlaceObject *place = [[PlaceObject alloc] initWithData:placeData];
         
-        // Find people at location per place here
-        
         // Add to allCells array
         [_allCells addObject:place];
     }
 
     // Parse Test
-    PFObject *allPlacesArray = [PFObject objectWithClassName:@"AllPlaces"];
-    [allPlacesArray addObjectsFromArray:[PlaceData allPlaces] forKey:@"wat"];
-    [allPlacesArray saveInBackground];
+//    PFObject *allPlacesArray = [PFObject objectWithClassName:@"AllPlaces"];
+//    [allPlacesArray addObjectsFromArray:[PlaceData allPlaces] forKey:@"wat"];
+//    [allPlacesArray saveInBackground];
     
     // Sets up the main table view
     [self setupTableView];
@@ -193,9 +191,6 @@
 - (void)refresh
 {
     // Refresh list when clicked
-//    CCScene *restartScene = [[[MainScene class] alloc] init];
-//    [[CCDirector sharedDirector] replaceScene:restartScene];
-    
     [_tableView reloadData];
 }
 
