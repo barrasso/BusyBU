@@ -2,7 +2,7 @@
 //  MainScene.m
 //  WHATS BUSY
 //
-//  Created by Mrk on 09/01/14.
+//  Created by Mark on 09/01/14.
 //  Copyright (c) 2014 Mark Barrasso. All rights reserved.
 //
 
@@ -24,6 +24,9 @@
     
     // All Places
     NSMutableArray *_allCells;
+    
+    // Parse Object
+    PFObject *parsePlacesObject;
 }
 
 #pragma mark - Lifecycle
@@ -36,6 +39,9 @@
     // Init array to hold all cells
     _allCells = [[NSMutableArray alloc] init];
     
+    // Parse Object Init
+    parsePlacesObject = [PFObject objectWithClassName:@"Places"];
+    
     // Create place objects and add them to allCells array
     for (NSMutableDictionary *placeData in [PlaceData allPlaces])
     {
@@ -44,12 +50,13 @@
         
         // Add to allCells array
         [_allCells addObject:place];
+        
+        // Add to Parse object
+        [parsePlacesObject addObject:place.name forKey:@"Names"];
+        
+        // Save parse object
+        [parsePlacesObject saveInBackground];
     }
-
-    // Parse Test
-//    PFObject *allPlacesArray = [PFObject objectWithClassName:@"AllPlaces"];
-//    [allPlacesArray addObjectsFromArray:[PlaceData allPlaces] forKey:@"wat"];
-//    [allPlacesArray saveInBackground];
     
     // Sets up the main table view
     [self setupTableView];
