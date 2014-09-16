@@ -55,7 +55,12 @@
         [parsePlacesObject addObject:place.name forKey:@"Names"];
         
         // Save parse object
-        [parsePlacesObject saveInBackground];
+        [parsePlacesObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (succeeded)
+                CCLOG(@"Place Created with ID: %@",parsePlacesObject.objectId);
+            else
+                CCLOG(@"%@",error);
+        }];
     }
     
     // Sets up the main table view
