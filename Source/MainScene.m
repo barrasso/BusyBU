@@ -51,8 +51,11 @@
         // Add to allCells array
         [_allCells addObject:place];
         
-        // Add to Parse object
+        // Add Names to Parse object
         [parsePlacesObject addObject:place.name forKey:@"Names"];
+        
+        // Add Statuses to Parse object
+        [parsePlacesObject addObject:place.status forKey:@"Statuses"];
         
         // Save parse object
         [parsePlacesObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -136,6 +139,7 @@
 // This method is called automatically by the CCTableView to create cells
 - (float) tableView:(CCTableView*)tableView heightForRowAtIndex:(NSUInteger) index
 {
+    // Return row height of 100
 	return 100;
 }
 
@@ -156,8 +160,8 @@
     PlaceObject *place = [_allCells objectAtIndex:index];
     
     // Check if a popup is already open
-    if (self.isPopupOpen) {
-        
+    if (self.isPopupOpen)
+    {
         // If it is, close it
         [self removeChild:currentPopup];
         
@@ -204,11 +208,6 @@
 {
     // Refresh list when clicked
     [_tableView reloadData];
-}
-
-- (void)filter
-{
-    // Filter list
 }
 
 @end

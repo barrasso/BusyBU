@@ -974,11 +974,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>291.48721313476562</real>
-							<real>539.18902587890625</real>
+							<real>0.91089755296707153</real>
+							<real>0.94927644729614258</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -1023,8 +1023,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>16</real>
+							<real>16</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -1080,8 +1080,16 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string></string>
+							<string>Images/refresh.png</string>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>backgroundOpacity|Highlighted</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.80000001192092896</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1267,6 +1275,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
