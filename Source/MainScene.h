@@ -10,6 +10,12 @@
 
 @interface MainScene : CCNode <CCTableViewDataSource>
 
+// Cooldown timer
+@property (nonatomic, assign) float cooldownTimer;
+
+// User's rating cooldown
+@property (nonatomic, assign) BOOL isOnCooldown;
+
 // Boolean flag to check if popup is open
 @property (nonatomic, assign) BOOL isPopupOpen;
 

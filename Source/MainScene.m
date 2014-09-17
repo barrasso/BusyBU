@@ -39,6 +39,15 @@
     // Init array to hold all cells
     _allCells = [[NSMutableArray alloc] init];
     
+    // Load NSUserDefaults boolean
+    self.isOnCooldown = [[[NSUserDefaults standardUserDefaults] objectForKey:@"CooldownFlag"] boolValue];
+    
+    // Load NSUserDefaults timer
+    self.cooldownTimer = [[[NSUserDefaults standardUserDefaults] objectForKey:@"CooldownTimer"] floatValue];
+    
+    // Sync NSUserDefaults
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     // Parse Object Init
     parsePlacesObject = [PFObject objectWithClassName:@"Places"];
     
@@ -77,6 +86,31 @@
     // Remove table view delegate when this class is deallocated
     [_tableView setTarget:nil selector:nil];
 }
+
+- (void)update:(CCTime)delta
+{
+    // Check if user has rating cooldown
+    if (self.isOnCooldown)
+    {
+        // If the user is on cooldown, start the cooldown timer
+        [[NSUserDefaults standardUserDefaults] setFloat:(self.cooldownTimer+1) forKey:@"CooldownTimer"];
+        
+        // Sync NSUserDefaults
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    // If the cooldown timer reaches a minute
+    if (self.cooldownTimer >= 3500.f)
+    {
+        // Turn the cooldown off
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"CooldownFlag"];
+        
+        // Reset cooldown timer to 0
+        [[NSUserDefaults standardUserDefaults] setFloat:0.0f forKey:@"CooldownTimer"];
+        
+        // Sync NSUserDefaults
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }}
 
 #pragma mark - CCTableViewDataSource Protocol
 
