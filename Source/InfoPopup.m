@@ -12,10 +12,8 @@
 
 #pragma mark - Lifecycle
 
-- (void)onEnter
+- (void)didLoadFromCCB
 {
-    [super onEnter];
-    
     // Set user interaction enabled
     self.userInteractionEnabled = YES;
     
@@ -27,12 +25,6 @@
     
     // Sync NSUserDefaults
     [[NSUserDefaults standardUserDefaults] synchronize];
-}
-
-- (void)onExit
-{
-    // Deallocate memory
-    [super onExit];
 }
 
 - (void)update:(CCTime)delta
@@ -79,9 +71,6 @@
         // Display cooldown message
         CCLOG(@"You've just rated a place. Try again in a minute.");
     }
-    
-    // Close after rating
-    [self closePopup];
 }
 
 - (void)kindaBusy
@@ -99,9 +88,6 @@
         // Display cooldown message
         CCLOG(@"You've just rated a place. Try again in a minute.");
     }
-    
-    // Close after rating
-    [self closePopup];
 }
 
 - (void)itsBusy
@@ -120,15 +106,6 @@
         // Display cooldown message
         CCLOG(@"You've just rated a place. Try again in a minute.");
     }
-    
-    // Close after rating
-    [self closePopup];
-}
-
-- (void)closePopup
-{
-    // Closes the popup and removes from main scene
-    [self removeFromParent];
 }
 
 @end

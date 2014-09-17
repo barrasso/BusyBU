@@ -39,15 +39,6 @@
     // Init array to hold all cells
     _allCells = [[NSMutableArray alloc] init];
     
-    // Load NSUserDefaults boolean
-    self.isOnCooldown = [[[NSUserDefaults standardUserDefaults] objectForKey:@"CooldownFlag"] boolValue];
-    
-    // Load NSUserDefaults timer
-    self.cooldownTimer = [[[NSUserDefaults standardUserDefaults] objectForKey:@"CooldownTimer"] floatValue];
-    
-    // Sync NSUserDefaults
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
     // Parse Object Init
     parsePlacesObject = [PFObject objectWithClassName:@"Places"];
     
@@ -89,6 +80,15 @@
 
 - (void)update:(CCTime)delta
 {
+    // Load NSUserDefaults boolean
+    self.isOnCooldown = [[[NSUserDefaults standardUserDefaults] objectForKey:@"CooldownFlag"] boolValue];
+    
+    // Load NSUserDefaults timer
+    self.cooldownTimer = [[[NSUserDefaults standardUserDefaults] objectForKey:@"CooldownTimer"] floatValue];
+
+    // Sync NSUserDefaults
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     // Check if user has rating cooldown
     if (self.isOnCooldown)
     {
@@ -110,7 +110,8 @@
         
         // Sync NSUserDefaults
         [[NSUserDefaults standardUserDefaults] synchronize];
-    }}
+    }
+}
 
 #pragma mark - CCTableViewDataSource Protocol
 
