@@ -16,4 +16,7 @@
 // User's rating cooldown
 @property (nonatomic, assign) BOOL isOnCooldown;
 
+// Cooldown timer
+@property (nonatomic, assign) float cooldownTimer;
+
 @end

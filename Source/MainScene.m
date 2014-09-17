@@ -57,10 +57,12 @@
         // Add Statuses to Parse object
         [parsePlacesObject addObject:place.status forKey:@"Statuses"];
         
-        // Save parse object
+        // Save parse object in background with block
         [parsePlacesObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            // If the parse object was saved, then display created ID
             if (succeeded)
                 CCLOG(@"Place Created with ID: %@",parsePlacesObject.objectId);
+            // Else, display the error
             else
                 CCLOG(@"%@",error);
         }];
