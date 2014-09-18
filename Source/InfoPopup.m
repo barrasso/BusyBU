@@ -12,8 +12,10 @@
 
 #pragma mark - Lifecycle
 
-- (void)didLoadFromCCB
+- (void)onEnter
 {
+    [super onEnter];
+    
     // Set user interaction enabled
     self.userInteractionEnabled = YES;
     
@@ -25,6 +27,12 @@
     
     // Sync NSUserDefaults
     [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)onExit
+{
+    // Deallocate
+    [super onExit];
 }
 
 - (void)update:(CCTime)delta
@@ -50,9 +58,7 @@
         
         // Sync NSUserDefaults
         [[NSUserDefaults standardUserDefaults] synchronize];
-    }
-    
-    CCLOG(@"%f",self.cooldownTimer);
+    }    
 }
 
 #pragma mark - Selectors

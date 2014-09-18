@@ -26,7 +26,10 @@
     NSMutableArray *_allCells;
     
     // Parse Object
-    PFObject *parsePlacesObject;
+    PFObject *parsePlaceObject;
+    
+    // Place counter
+    int placeCounter;
 }
 
 #pragma mark - Lifecycle
@@ -39,8 +42,8 @@
     // Init array to hold all cells
     _allCells = [[NSMutableArray alloc] init];
     
-    // Parse Object Init
-    parsePlacesObject = [PFObject objectWithClassName:@"Places"];
+    // Place counter
+    placeCounter = 0;
     
     // Create place objects and add them to allCells array
     for (NSMutableDictionary *placeData in [PlaceData allPlaces])
@@ -51,17 +54,26 @@
         // Add to allCells array
         [_allCells addObject:place];
         
+        // Create place number string for parse object class
+        NSString *placeCounterString = [NSString stringWithFormat:@"Place%i",placeCounter];
+        
+        // Parse Object Init
+        parsePlaceObject = [PFObject objectWithClassName:placeCounterString];
+        
+        // Increment place counter
+        placeCounter++;
+        
         // Add Names to Parse object
-        [parsePlacesObject addObject:place.name forKey:@"Names"];
+        [parsePlaceObject addObject:place.name forKey:@"Name"];
         
         // Add Statuses to Parse object
-        [parsePlacesObject addObject:place.status forKey:@"Statuses"];
+        [parsePlaceObject addObject:place.status forKey:@"Status"];
         
         // Save parse object in background with block
-        [parsePlacesObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [parsePlaceObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             // If the parse object was saved, then display created ID
             if (succeeded)
-                CCLOG(@"Place Created with ID: %@",parsePlacesObject.objectId);
+                CCLOG(@"Place Created with ID: %@",parsePlaceObject.objectId);
             // Else, display the error
             else
                 CCLOG(@"%@",error);
@@ -111,7 +123,6 @@
         // Sync NSUserDefaults
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
-    CCLOG(@"%f",self.cooldownTimer);
 }
 
 #pragma mark - CCTableViewDataSource Protocol

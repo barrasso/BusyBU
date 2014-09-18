@@ -22,4 +22,7 @@
 // Toggle boolean flag
 - (void)togglePopupBool;
 
+// Refresh table data
+- (void)refresh;
+
 @end
