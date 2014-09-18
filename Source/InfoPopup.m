@@ -7,8 +7,13 @@
 //
 
 #import "InfoPopup.h"
+#import <Parse/Parse.h>
 
 @implementation InfoPopup
+{
+    // Parse object retrieval
+    PFQuery *query;
+}
 
 #pragma mark - Lifecycle
 
@@ -27,6 +32,9 @@
     
     // Sync NSUserDefaults
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    // Parse query to get places
+    query = [PFQuery queryWithClassName:@"Places"];
 }
 
 - (void)onExit
@@ -68,7 +76,15 @@
     // If the user is not on cooldown
     if (!self.isOnCooldown)
     {
-        // Rate NOT busy
+        // Get place by parse object ID
+        [query getObjectInBackgroundWithId:self.objectIDLabel.string block:^(PFObject *placeObj, NSError *error)
+         {
+             // Update status to rate not busy
+             placeObj[@"Status"] = @"OPEN";
+             
+             // Save status rating
+             [placeObj saveInBackground];
+         }];
         
         // Init rate cooldown
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"CooldownFlag"];
@@ -86,7 +102,15 @@
     // If the user is not on cooldown
     if (!self.isOnCooldown)
     {
-        // Rate KINDA busy
+        // Get place by parse object ID
+        [query getObjectInBackgroundWithId:self.objectIDLabel.string block:^(PFObject *placeObj, NSError *error)
+         {
+             // Update status to rate kinda busy
+             placeObj[@"Status"] = @"MILD";
+             
+             // Save status rating
+             [placeObj saveInBackground];
+         }];
     
         // Init rate cooldown
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"CooldownFlag"];
@@ -103,7 +127,15 @@
     // If the user is not on cooldown
     if (!self.isOnCooldown)
     {
-        // Rate IT IS busy
+        // Get place by parse object ID
+        [query getObjectInBackgroundWithId:self.objectIDLabel.string block:^(PFObject *placeObj, NSError *error)
+         {
+             // Update status to rate it is busy
+             placeObj[@"Status"] = @"BUSY";
+             
+             // Save status rating
+             [placeObj saveInBackground];
+         }];
         
         // Init rate cooldown
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"CooldownFlag"];

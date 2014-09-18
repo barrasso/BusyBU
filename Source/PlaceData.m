@@ -18,49 +18,49 @@
     /* Student Utilities */
     
     // FitRec
-    NSDictionary *fitrecInfo = @{PLACE_NAME : @"FITREC", PLACE_STATUS : @"STATUS"};
+    NSDictionary *fitrecInfo = @{PLACE_NAME : @"FITREC", OBJ_ID : @"U835guaY4k"};
     [placeInfo addObject:fitrecInfo];
     
     // GSU
-    NSDictionary *gsuInfo = @{PLACE_NAME : @"GSU", PLACE_STATUS : @"STATUS"};
+    NSDictionary *gsuInfo = @{PLACE_NAME : @"GSU", OBJ_ID : @"lMCMbQZXuF"};
     [placeInfo addObject:gsuInfo];
     
     /* Study Places */
     
     // Ingalls
-    NSDictionary *ingallsInfo = @{PLACE_NAME : @"INGALLS", PLACE_STATUS : @"STATUS"};
+    NSDictionary *ingallsInfo = @{PLACE_NAME : @"INGALLS", OBJ_ID : @"duQYkFbgqR"};
     [placeInfo addObject:ingallsInfo];
     
     // Mugar Library
-    NSDictionary *mugarInfo = @{PLACE_NAME : @"MUGAR", PLACE_STATUS : @"STATUS"};
+    NSDictionary *mugarInfo = @{PLACE_NAME : @"MUGAR", OBJ_ID : @"hJjLOuPs3d"};
     [placeInfo addObject:mugarInfo];
     
     // Photonics
-    NSDictionary *photonicsInfo = @{PLACE_NAME : @"PHOTONICS", PLACE_STATUS : @"STATUS"};
+    NSDictionary *photonicsInfo = @{PLACE_NAME : @"PHOTONICS", OBJ_ID : @"wGK6akcNh9"};
     [placeInfo addObject:photonicsInfo];
     
     /* Dining Halls */
     
     // Warren
-    NSDictionary *warrenDhInfo = @{PLACE_NAME : @"WARREN DINING HALL", PLACE_STATUS : @"STATUS"};
+    NSDictionary *warrenDhInfo = @{PLACE_NAME : @"WARREN DINING HALL", OBJ_ID : @"YU2njb4jjU"};
     [placeInfo addObject:warrenDhInfo];
     
     // West
-    NSDictionary *westDhInfo = @{PLACE_NAME : @"WEST DINING HALL", PLACE_STATUS : @"STATUS"};
+    NSDictionary *westDhInfo = @{PLACE_NAME : @"WEST DINING HALL", OBJ_ID : @"0x77bPxb3V"};
     [placeInfo addObject:westDhInfo];
     
     /* Social */
     
     // BU Pub
-    NSDictionary *buPubInfo = @{PLACE_NAME : @"BU PUB", PLACE_STATUS : @"STATUS"};
+    NSDictionary *buPubInfo = @{PLACE_NAME : @"BU PUB", OBJ_ID : @"UkMbFaZpuH"};
     [placeInfo addObject:buPubInfo];
     
     // T's Pub
-    NSDictionary *tPubInfo = @{PLACE_NAME : @"T'S PUB", PLACE_STATUS : @"STATUS"};
+    NSDictionary *tPubInfo = @{PLACE_NAME : @"T'S PUB", OBJ_ID : @"aULkZ3oA7k"};
     [placeInfo addObject:tPubInfo];
     
     // T.I.T.S.
-    NSDictionary *titsInfo = @{PLACE_NAME : @"T.I.T.S.", PLACE_STATUS : @"STATUS"};
+    NSDictionary *titsInfo = @{PLACE_NAME : @"T.I.T.S.", OBJ_ID : @"EGrFgA5vuC"};
     [placeInfo addObject:titsInfo];
     
     // Return copy of array

@@ -54,30 +54,30 @@
         // Add to allCells array
         [_allCells addObject:place];
         
-        // Create place number string for parse object class
-        NSString *placeCounterString = [NSString stringWithFormat:@"Place%i",placeCounter];
-        
-        // Parse Object Init
-        parsePlaceObject = [PFObject objectWithClassName:placeCounterString];
-        
-        // Increment place counter
-        placeCounter++;
-        
-        // Add Names to Parse object
-        [parsePlaceObject addObject:place.name forKey:@"Name"];
-        
-        // Add Statuses to Parse object
-        [parsePlaceObject addObject:place.status forKey:@"Status"];
-        
-        // Save parse object in background with block
-        [parsePlaceObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            // If the parse object was saved, then display created ID
-            if (succeeded)
-                CCLOG(@"Place Created with ID: %@",parsePlaceObject.objectId);
-            // Else, display the error
-            else
-                CCLOG(@"%@",error);
-        }];
+//        // Create place number string for parse object class
+//        NSString *placeCounterString = [NSString stringWithFormat:@"Place%i",placeCounter];
+//        
+//        // Parse Object Init
+//        parsePlaceObject = [PFObject objectWithClassName:placeCounterString];
+//        
+//        // Increment place counter
+//        placeCounter++;
+//        
+//        // Add Names to Parse object
+//        [parsePlaceObject addObject:place.name forKey:@"Name"];
+//        
+//        // Add Statuses to Parse object
+//        [parsePlaceObject addObject:place.status forKey:@"Status"];
+//        
+//        // Save parse object in background with block
+//        [parsePlaceObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//            // If the parse object was saved, then display created ID
+//            if (succeeded)
+//                CCLOG(@"Place Created with ID: %@",parsePlaceObject.objectId);
+//            // Else, display the error
+//            else
+//                CCLOG(@"%@",error);
+//        }];
     }
     
     // Sets up the main table view
@@ -227,6 +227,7 @@
         infoPopup.positionType = CCPositionTypeNormalized;
         infoPopup.position = ccp(0.5,0.5);
         infoPopup.placeNameLabel.string = place.name;
+        infoPopup.objectIDLabel.string = place.objID;
         
         // Then set boolean flag to true
         [self togglePopupBool];

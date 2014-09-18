@@ -13,6 +13,9 @@
 // Displays the place's name
 @property (strong) CCLabelTTF *placeNameLabel;
 
+// Contains the place's object id
+@property (strong) CCLabelTTF *objectIDLabel;
+
 // User's rating cooldown
 @property (nonatomic, assign) BOOL isOnCooldown;
 

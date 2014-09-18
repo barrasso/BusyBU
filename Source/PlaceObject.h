@@ -13,6 +13,9 @@
 // Place Name
 @property (nonatomic, strong) NSString *name;
 
+// Place Object ID
+@property (nonatomic, strong) NSString *objID;
+
 // Place Status
 @property (nonatomic, strong) NSString *status;
 
