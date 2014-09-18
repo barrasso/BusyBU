@@ -39,8 +39,8 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
-    // If the cooldown timer reaches a minute
-    if (self.cooldownTimer >= 3500.f)
+    // If the cooldown timer reaches 1000.f
+    if (self.cooldownTimer >= 1000.f)
     {
         // Turn the cooldown off
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"CooldownFlag"];
@@ -51,6 +51,8 @@
         // Sync NSUserDefaults
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
+    
+    CCLOG(@"%f",self.cooldownTimer);
 }
 
 #pragma mark - Selectors
