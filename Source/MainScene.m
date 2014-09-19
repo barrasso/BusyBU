@@ -25,11 +25,8 @@
     // All Places
     NSMutableArray *_allCells;
     
-    // Parse Object
-    PFObject *parsePlaceObject;
-    
-    // Place counter
-    int placeCounter;
+    // Parse object retrieval
+    PFQuery *query;
 }
 
 #pragma mark - Lifecycle
@@ -38,12 +35,9 @@
 {
     // Enable touches
     self.userInteractionEnabled = YES;
-
+    
     // Init array to hold all cells
     _allCells = [[NSMutableArray alloc] init];
-    
-    // Place counter
-    placeCounter = 0;
     
     // Create place objects and add them to allCells array
     for (NSMutableDictionary *placeData in [PlaceData allPlaces])
@@ -53,31 +47,7 @@
         
         // Add to allCells array
         [_allCells addObject:place];
-        
-//        // Create place number string for parse object class
-//        NSString *placeCounterString = [NSString stringWithFormat:@"Place%i",placeCounter];
-//        
-//        // Parse Object Init
-//        parsePlaceObject = [PFObject objectWithClassName:placeCounterString];
-//        
-//        // Increment place counter
-//        placeCounter++;
-//        
-//        // Add Names to Parse object
-//        [parsePlaceObject addObject:place.name forKey:@"Name"];
-//        
-//        // Add Statuses to Parse object
-//        [parsePlaceObject addObject:place.status forKey:@"Status"];
-//        
-//        // Save parse object in background with block
-//        [parsePlaceObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//            // If the parse object was saved, then display created ID
-//            if (succeeded)
-//                CCLOG(@"Place Created with ID: %@",parsePlaceObject.objectId);
-//            // Else, display the error
-//            else
-//                CCLOG(@"%@",error);
-//        }];
+
     }
     
     // Sets up the main table view
@@ -148,7 +118,10 @@
 
 // This method is called automatically by the CCTableView to create cells
 - (CCTableViewCell*)tableView:(CCTableView*)tableView nodeForRowAtIndex:(NSUInteger)index
-{    
+{
+    // Parse query to get places
+    query = [PFQuery queryWithClassName:@"Places"];
+    
     // Initialize TableViewCell
     CCTableViewCell *cell = [[CCTableViewCell alloc] init];
 	   
@@ -161,18 +134,31 @@
     // Set the cell's label
     cellContent.placeLabel.string = place.name;
     
-    /* 
-     Set the cell's color
-     * BUSY = Red
-     * MILD = Blue
-     * OPEN = Green
-     */
-    if ([place.status isEqualToString:@"BUSY"])
-        cellContent.placeColor.color = [CCColor colorWithRed:0.5f green:0.f blue:0.f];
-    else if ([place.status isEqualToString:@"MILD"])
-        cellContent.placeColor.color = [CCColor colorWithRed:0.f green:0.f blue:0.5f];
-    else
-        cellContent.placeColor.color = [CCColor colorWithRed:0.f green:0.5f blue:0.f];
+    // Get place by parse object ID
+    [query getObjectInBackgroundWithId:place.objID block:^(PFObject *placeObj, NSError *error)
+     {
+         // Get values of all object's requests
+         
+         // Compare values
+         
+         // Set status
+         
+         // Get place status from parse server and update it
+         NSString *currentStatus = placeObj[@"Status"];
+         place.status = currentStatus;
+         
+         /* Set the cell's color
+          * BUSY = Red
+          * MILD = Blue
+          * OPEN = Green
+          */
+         if ([place.status isEqualToString:@"BUSY"])
+             cellContent.placeColor.color = [CCColor colorWithRed:0.5f green:0.f blue:0.f];
+         else if ([place.status isEqualToString:@"MILD"])
+             cellContent.placeColor.color = [CCColor colorWithRed:0.f green:0.f blue:0.5f];
+         else
+             cellContent.placeColor.color = [CCColor colorWithRed:0.f green:0.5f blue:0.f];
+     }];
     
     // Add cellContent to cell
     [cell addChild:cellContent];
