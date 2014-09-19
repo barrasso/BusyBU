@@ -80,7 +80,7 @@
         [query getObjectInBackgroundWithId:self.objectIDLabel.string block:^(PFObject *placeObj, NSError *error)
          {
              // Update status to rate not busy
-             placeObj[@"Status"] = @"OPEN";
+             [placeObj incrementKey:@"NBR"];
              
              // Save status rating
              [placeObj saveInBackground];
@@ -106,7 +106,7 @@
         [query getObjectInBackgroundWithId:self.objectIDLabel.string block:^(PFObject *placeObj, NSError *error)
          {
              // Update status to rate kinda busy
-             placeObj[@"Status"] = @"MILD";
+             [placeObj incrementKey:@"MR"];
              
              // Save status rating
              [placeObj saveInBackground];
@@ -131,7 +131,7 @@
         [query getObjectInBackgroundWithId:self.objectIDLabel.string block:^(PFObject *placeObj, NSError *error)
          {
              // Update status to rate it is busy
-             placeObj[@"Status"] = @"BUSY";
+             [placeObj incrementKey:@"BR"];
              
              // Save status rating
              [placeObj saveInBackground];
