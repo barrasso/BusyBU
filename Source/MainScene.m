@@ -218,8 +218,7 @@
              place.status = @"TROLLS";
          if ((notBusyRequests == busyRequests) && (notBusyRequests == mildRequests) && (mildRequests == busyRequests))
              place.status = @"TROLLS";
-        
-         
+                 
          // Set the cell's color
          if ([place.status isEqualToString:@"BUSY"])
              cellContent.placeColor.color = [CCColor colorWithRed:0.5f green:0.f blue:0.f];
