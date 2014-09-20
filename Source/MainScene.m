@@ -47,7 +47,6 @@
         
         // Add to allCells array
         [_allCells addObject:place];
-
     }
     
     // Sets up the main table view
@@ -137,21 +136,96 @@
     // Get place by parse object ID
     [query getObjectInBackgroundWithId:place.objID block:^(PFObject *placeObj, NSError *error)
      {
-         // Get values of all object's requests
+         // Get values of object's NOT BUSY requests and add to placeholder array
+         int notBusyRequests = [[placeObj objectForKey:@"NBR"] intValue];
          
-         // Compare values
+         // Get values of object's MILD requests and add to placeholder array
+         int mildRequests = [[placeObj objectForKey:@"MR"] intValue];
+
+         // Get values of object's BUSY requests and add to placeholder array
+         int busyRequests = [[placeObj objectForKey:@"BR"] intValue];
          
-         // Set status
          
-         // Get place status from parse server and update it
-         NSString *currentStatus = placeObj[@"Status"];
-         place.status = currentStatus;
+         /*  Main Cases */
          
-         /* Set the cell's color
-          * BUSY = Red
-          * MILD = Blue
-          * OPEN = Green
-          */
+         // Check if there are mostly not busy requests
+         if ((notBusyRequests > mildRequests) && (notBusyRequests > busyRequests))
+         {
+             // Set the parse object status
+             placeObj[@"Status"] = @"NOTBUSY";
+             
+             // Set the place object status
+             place.status = @"NOTBUSY";
+             
+             // Save the parse object's status
+             [placeObj saveInBackground];
+         }
+         
+         // Check if there are mostly mild requests
+         if ((mildRequests > notBusyRequests) && (mildRequests > busyRequests))
+         {
+             // Set the parse object status
+             placeObj[@"Status"] = @"MILD";
+             
+             // Set the place object status
+             place.status = @"MILD";
+             
+             // Save the parse object's status
+             [placeObj saveInBackground];
+         }
+         
+         // Check if there are mostly busy requests
+         if ((busyRequests > notBusyRequests) && (busyRequests > mildRequests))
+         {
+             // Set the parse object status
+             placeObj[@"Status"] = @"BUSY";
+             
+             // Set the place object status
+             place.status = @"BUSY";
+             
+             // Save the parse object's status
+             [placeObj saveInBackground];
+         }
+         
+         
+         /* Intermediate Cases */
+         
+         // Check if there are equal level 1 requests
+         if ((notBusyRequests == mildRequests) && (notBusyRequests > busyRequests) && (mildRequests > busyRequests))
+         {
+             // Set the parse object status
+             placeObj[@"Status"] = @"MILD";
+             
+             // Set the place object status
+             place.status = @"MILD";
+             
+             // Save the parse object's status
+             [placeObj saveInBackground];
+         }
+         
+
+         // Check if there are equal level 2 requests
+         if ((busyRequests == mildRequests) && (busyRequests > notBusyRequests) && (mildRequests > notBusyRequests))
+         {
+             // Set the parse object status
+             placeObj[@"Status"] = @"BUSY";
+             
+             // Set the place object status
+             place.status = @"BUSY";
+             
+             // Save the parse object's status
+             [placeObj saveInBackground];
+         }
+         
+         /* Extraneous Cases */
+         // Check if there are equal opposite requests
+         if (notBusyRequests == busyRequests)
+             place.status = @"TROLLS";
+         if ((notBusyRequests == busyRequests) && (notBusyRequests == mildRequests) && (mildRequests == busyRequests))
+             place.status = @"TROLLS";
+        
+         
+         // Set the cell's color
          if ([place.status isEqualToString:@"BUSY"])
              cellContent.placeColor.color = [CCColor colorWithRed:0.5f green:0.f blue:0.f];
          else if ([place.status isEqualToString:@"MILD"])
