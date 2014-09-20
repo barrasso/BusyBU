@@ -145,9 +145,7 @@
          // Get values of object's BUSY requests and add to placeholder array
          int busyRequests = [[placeObj objectForKey:@"BR"] intValue];
          
-         
          /*  Main Cases */
-         
          // Check if there are mostly not busy requests
          if ((notBusyRequests > mildRequests) && (notBusyRequests > busyRequests))
          {
@@ -187,9 +185,7 @@
              [placeObj saveInBackground];
          }
          
-         
          /* Intermediate Cases */
-         
          // Check if there are equal level 1 requests
          if ((notBusyRequests == mildRequests) && (notBusyRequests > busyRequests) && (mildRequests > busyRequests))
          {
@@ -203,7 +199,6 @@
              [placeObj saveInBackground];
          }
          
-
          // Check if there are equal level 2 requests
          if ((busyRequests == mildRequests) && (busyRequests > notBusyRequests) && (mildRequests > notBusyRequests))
          {
