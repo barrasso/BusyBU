@@ -7,10 +7,14 @@
 //
 
 #import "InfoPopup.h"
+#import "MainScene.h"
 #import <Parse/Parse.h>
 
 @implementation InfoPopup
 {
+    // Check if self is open
+    BOOL isPopupOpen;
+    
     // Parse object retrieval
     PFQuery *query;
 }
@@ -23,6 +27,9 @@
     
     // Set user interaction enabled
     self.userInteractionEnabled = YES;
+    
+    // Load NSUser isPopupOpen
+    isPopupOpen = [[[NSUserDefaults standardUserDefaults] objectForKey:@"isPopupOpen"] boolValue];
     
     // Load NSUserDefaults boolean
     self.isOnCooldown = [[[NSUserDefaults standardUserDefaults] objectForKey:@"CooldownFlag"] boolValue];
@@ -88,12 +95,24 @@
         
         // Init rate cooldown
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"CooldownFlag"];
+        
+        // Toggle mainscene popup boolean
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
+        
+        // Close popup after rating
+        [self removeFromParent];
     }
     // Else, display the cooldown message
     else
     {
         // Display cooldown message
         CCLOG(@"You've just rated a place. Try again in a minute.");
+        
+        // Toggle mainscene popup boolean
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
+        
+        // Close popup after rating
+        [self removeFromParent];
     }
 }
 
@@ -114,11 +133,23 @@
     
         // Init rate cooldown
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"CooldownFlag"];
+        
+        // Toggle mainscene popup boolean
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
+        
+        // Close popup after rating
+        [self removeFromParent];
     }
     // Else, display the cooldown message
     {
         // Display cooldown message
         CCLOG(@"You've just rated a place. Try again in a minute.");
+        
+        // Toggle mainscene popup boolean
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
+        
+        // Close popup after rating
+        [self removeFromParent];
     }
 }
 
@@ -139,12 +170,24 @@
         
         // Init rate cooldown
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"CooldownFlag"];
+        
+        // Toggle mainscene popup boolean
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
+        
+        // Close popup after rating
+        [self removeFromParent];
     }
     // Else, display the cooldown message
     else
     {
         // Display cooldown message
         CCLOG(@"You've just rated a place. Try again in a minute.");
+        
+        // Toggle mainscene popup boolean
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
+        
+        // Close popup after rating
+        [self removeFromParent];
     }
 }
 

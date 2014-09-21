@@ -19,8 +19,8 @@
     CCTableView *_tableView;
     CCNode *_tableViewNode;
     
-    // Popup
-    CCNode *currentPopup;
+    // Popup boolean
+    BOOL isPopupOpen;
     
     // All Places
     NSMutableArray *_allCells;
@@ -38,6 +38,12 @@
     
     // Init array to hold all cells
     _allCells = [[NSMutableArray alloc] init];
+    
+    // Load NSUser isPopupOpen
+    isPopupOpen = [[[NSUserDefaults standardUserDefaults] objectForKey:@"isPopupOpen"] boolValue];
+    
+    // Sync NSUserDefaults
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
     // Create place objects and add them to allCells array
     for (NSMutableDictionary *placeData in [PlaceData allPlaces])
@@ -218,7 +224,7 @@
              place.status = @"TROLLS";
          if ((notBusyRequests == busyRequests) && (notBusyRequests == mildRequests) && (mildRequests == busyRequests))
              place.status = @"TROLLS";
-                 
+                
          // Set the cell's color
          if ([place.status isEqualToString:@"BUSY"])
              cellContent.placeColor.color = [CCColor colorWithRed:0.5f green:0.f blue:0.f];
@@ -263,10 +269,10 @@
     PlaceObject *place = [_allCells objectAtIndex:index];
     
     // Check if a popup is already open
-    if (self.isPopupOpen)
+    if (isPopupOpen)
     {
         // If it is, close it
-        [self removeChild:currentPopup];
+        [self removeChild:self.currentPopup];
         
         // Toggle isPopupOpen state
         [self togglePopupBool];
@@ -290,7 +296,7 @@
         [self addChild:infoPopup];
         
         // Add as current popup
-        currentPopup = infoPopup;
+        self.currentPopup = infoPopup;
     }
 }
 
@@ -300,10 +306,10 @@
 - (void)togglePopupBool
 {
     // Toggle open or closed
-    if (self.isPopupOpen)
-        self.isPopupOpen = NO;
+    if (isPopupOpen)
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
     else
-        self.isPopupOpen = YES;
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isPopupOpen"];
 }
 
 #pragma mark - Selectors

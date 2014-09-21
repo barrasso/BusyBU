@@ -7,8 +7,12 @@
 //
 
 #import "CCNode.h"
+@class MainScene;
 
 @interface InfoPopup : CCNode
+
+// Main Scene
+@property (nonatomic, weak) MainScene *mainScene;
 
 // Displays the place's name
 @property (strong) CCLabelTTF *placeNameLabel;
