@@ -9,7 +9,7 @@
 #import "CCNode.h"
 @class MainScene;
 
-@interface InfoPopup : CCNode
+@interface InfoPopup : CCNode <UIAlertViewDelegate>
 
 // Main Scene
 @property (nonatomic, weak) MainScene *mainScene;

@@ -93,6 +93,10 @@
              [placeObj saveInBackground];
          }];
         
+        // Display success message
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Thanks!" message:@"Your feedback has been recorded." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        
         // Init rate cooldown
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"CooldownFlag"];
         
@@ -106,7 +110,8 @@
     else
     {
         // Display cooldown message
-        CCLOG(@"You've just rated a place. Try again in a minute.");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uh Oh!" message:@"You've just rated a place." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
         
         // Toggle mainscene popup boolean
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
@@ -131,6 +136,10 @@
              [placeObj saveInBackground];
          }];
     
+        // Display success message
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Thanks!" message:@"Your feedback has been recorded." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        
         // Init rate cooldown
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"CooldownFlag"];
         
@@ -143,7 +152,8 @@
     // Else, display the cooldown message
     {
         // Display cooldown message
-        CCLOG(@"You've just rated a place. Try again in a minute.");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uh Oh!" message:@"You've just rated a place." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
         
         // Toggle mainscene popup boolean
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
@@ -168,6 +178,10 @@
              [placeObj saveInBackground];
          }];
         
+        // Display success message
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Thanks!" message:@"Your feedback has been recorded." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        
         // Init rate cooldown
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"CooldownFlag"];
         
@@ -181,7 +195,8 @@
     else
     {
         // Display cooldown message
-        CCLOG(@"You've just rated a place. Try again in a minute.");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uh Oh!" message:@"You've just rated a place." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
         
         // Toggle mainscene popup boolean
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
