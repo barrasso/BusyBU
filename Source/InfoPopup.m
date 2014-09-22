@@ -110,7 +110,7 @@
     else
     {
         // Display cooldown message
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uh Oh!" message:@"You've just rated a place." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uh Oh!" message:@"You've just rated a place, try again later." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
         
         // Toggle mainscene popup boolean
@@ -152,7 +152,7 @@
     // Else, display the cooldown message
     {
         // Display cooldown message
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uh Oh!" message:@"You've just rated a place." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uh Oh!" message:@"You've just rated a place, try again later." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
         
         // Toggle mainscene popup boolean
@@ -195,7 +195,7 @@
     else
     {
         // Display cooldown message
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uh Oh!" message:@"You've just rated a place." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uh Oh!" message:@"You've just rated a place, try again later." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
         
         // Toggle mainscene popup boolean
