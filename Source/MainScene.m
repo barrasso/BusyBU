@@ -227,10 +227,13 @@
                 
          // Set the cell's color
          if ([place.status isEqualToString:@"BUSY"])
+             // Red Color
              cellContent.placeColor.color = [CCColor colorWithRed:0.5f green:0.f blue:0.f];
          else if ([place.status isEqualToString:@"MILD"])
+             // Blue Color
              cellContent.placeColor.color = [CCColor colorWithRed:0.f green:0.f blue:0.5f];
          else
+             // Green Color
              cellContent.placeColor.color = [CCColor colorWithRed:0.f green:0.5f blue:0.f];
      }];
     
