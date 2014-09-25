@@ -45,6 +45,11 @@
     // Sync NSUserDefaults
     [[NSUserDefaults standardUserDefaults] synchronize];
     
+    // Listen for Swipes Down
+    UISwipeGestureRecognizer *swipeDown= [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(refreshTable)];
+    swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
+    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeDown];
+    
     // Create place objects and add them to allCells array
     for (NSMutableDictionary *placeData in [PlaceData allPlaces])
     {
@@ -317,7 +322,7 @@
 
 #pragma mark - Selectors
 
-- (void)refresh
+- (void)refreshTable
 {
     // Refresh list when clicked
     [_tableView reloadData];

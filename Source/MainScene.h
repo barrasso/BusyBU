@@ -19,13 +19,10 @@
 // User's rating cooldown
 @property (nonatomic, assign) BOOL isOnCooldown;
 
-// Boolean flag to check if popup is open
-//@property (nonatomic, assign) BOOL isPopupOpen;
-
 // Toggle boolean flag
 - (void)togglePopupBool;
 
 // Refresh table data
-- (void)refresh;
+- (void)refreshTable;
 
 @end
