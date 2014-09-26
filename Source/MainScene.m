@@ -40,7 +40,9 @@
     _allCells = [[NSMutableArray alloc] init];
     
     // Load NSUser isPopupOpen
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
     isPopupOpen = [[[NSUserDefaults standardUserDefaults] objectForKey:@"isPopupOpen"] boolValue];
+    
     
     // Sync NSUserDefaults
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -225,8 +227,6 @@
          
          /* Extraneous Cases */
          // Check if there are equal opposite requests
-         if (notBusyRequests == busyRequests)
-             place.status = @"TROLLS";
          if ((notBusyRequests == busyRequests) && (notBusyRequests == mildRequests) && (mildRequests == busyRequests))
              place.status = @"TROLLS";
                 
@@ -270,6 +270,9 @@
 // This method is called automatically by the CCTableView when cells are tapped
 - (void)tableViewCellSelected:(CCTableViewCell*)sender
 {
+    // Load NSUser isPopupOpen
+    isPopupOpen = [[[NSUserDefaults standardUserDefaults] objectForKey:@"isPopupOpen"] boolValue];
+    
     // Get the index
 	NSInteger index = _tableView.selectedRow;
     
@@ -279,6 +282,9 @@
     // Check if a popup is already open
     if (isPopupOpen)
     {
+        // Disable user interaction
+        self.userInteractionEnabled = NO;
+        
         // If it is, close it
         [self removeChild:self.currentPopup];
         
@@ -288,7 +294,11 @@
     
     // If a popup is not already open
     else
-    {    // Load the place's popup
+    {
+        // Enable user interaction
+        self.userInteractionEnabled = YES;
+        
+        // Load the place's popup
         InfoPopup *infoPopup = (InfoPopup *)[CCBReader load:@"InfoPopup"];
         
         // Then position and initalize the popup

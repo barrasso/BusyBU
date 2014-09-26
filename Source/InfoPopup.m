@@ -50,36 +50,13 @@
     [super onExit];
 }
 
-- (void)update:(CCTime)delta
-{
-    // Check if user has rating cooldown
-    if (self.isOnCooldown)
-    {
-        // If the user is on cooldown, start the cooldown timer
-        [[NSUserDefaults standardUserDefaults] setFloat:(self.cooldownTimer+1) forKey:@"CooldownTimer"];
-        
-        // Sync NSUserDefaults
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
-    
-    // If the cooldown timer reaches 1000.f
-    if (self.cooldownTimer >= 1000.f)
-    {
-        // Turn the cooldown off
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"CooldownFlag"];
-        
-        // Reset cooldown timer to 0
-        [[NSUserDefaults standardUserDefaults] setFloat:0.0f forKey:@"CooldownTimer"];
-        
-        // Sync NSUserDefaults
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }    
-}
-
 #pragma mark - Selectors
 
 - (void)notBusy
 {
+    // Load NSUserDefaults boolean
+    self.isOnCooldown = [[[NSUserDefaults standardUserDefaults] objectForKey:@"CooldownFlag"] boolValue];
+    
     // If the user is not on cooldown
     if (!self.isOnCooldown)
     {
@@ -107,11 +84,11 @@
         [self removeFromParent];
     }
     // Else, display the cooldown message
-    else
+    else if (self.isOnCooldown)
     {
         // Display cooldown message
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uh Oh!" message:@"You've just rated a place, try again later." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
+        UIAlertView *alertNo = [[UIAlertView alloc] initWithTitle:@"Uh Oh!" message:@"You've just rated a place, try again later." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertNo show];
         
         // Toggle mainscene popup boolean
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
@@ -123,6 +100,9 @@
 
 - (void)kindaBusy
 {
+    // Load NSUserDefaults boolean
+    self.isOnCooldown = [[[NSUserDefaults standardUserDefaults] objectForKey:@"CooldownFlag"] boolValue];
+    
     // If the user is not on cooldown
     if (!self.isOnCooldown)
     {
@@ -150,10 +130,11 @@
         [self removeFromParent];
     }
     // Else, display the cooldown message
+    else if (self.isOnCooldown)
     {
         // Display cooldown message
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uh Oh!" message:@"You've just rated a place, try again later." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
+        UIAlertView *alertNo = [[UIAlertView alloc] initWithTitle:@"Uh Oh!" message:@"You've just rated a place, try again later." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertNo show];
         
         // Toggle mainscene popup boolean
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
@@ -165,6 +146,9 @@
 
 - (void)itsBusy
 {
+    // Load NSUserDefaults boolean
+    self.isOnCooldown = [[[NSUserDefaults standardUserDefaults] objectForKey:@"CooldownFlag"] boolValue];
+    
     // If the user is not on cooldown
     if (!self.isOnCooldown)
     {
@@ -192,11 +176,11 @@
         [self removeFromParent];
     }
     // Else, display the cooldown message
-    else
+    else if (self.isOnCooldown)
     {
         // Display cooldown message
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uh Oh!" message:@"You've just rated a place, try again later." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
+        UIAlertView *alertNo = [[UIAlertView alloc] initWithTitle:@"Uh Oh!" message:@"You've just rated a place, try again later." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertNo show];
         
         // Toggle mainscene popup boolean
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
