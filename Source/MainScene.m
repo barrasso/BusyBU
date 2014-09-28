@@ -168,7 +168,7 @@
              // Set the place object status
              place.status = @"NOTBUSY";
              
-             // Save the parse object's status
+             // Save the parse object status
              [placeObj saveInBackground];
          }
          
