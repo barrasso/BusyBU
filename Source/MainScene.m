@@ -340,19 +340,15 @@
 
 - (void)contactButton
 {
-    // If a contact and info popup are not open
-    if (!isPopupOpen)
-    {
-        // Loads contact popup
-        ContactPopup *contactPopup = (ContactPopup *)[CCBReader load:@"ContactPopup"];
+    // Loads contact popup
+    ContactPopup *contactPopup = (ContactPopup *)[CCBReader load:@"ContactPopup"];
     
-        // Position the popup
-        contactPopup.positionType = CCPositionTypeNormalized;
-        contactPopup.position = ccp(0.5,0.5);
+    // Position the popup
+    contactPopup.positionType = CCPositionTypeNormalized;
+    contactPopup.position = ccp(0.5,0.5);
     
-        // Add child to main scene
-        [self addChild:contactPopup];
-    }
+    // Add child to main scene
+    [self addChild:contactPopup];
 }
 
 @end

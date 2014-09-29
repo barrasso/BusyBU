@@ -39,15 +39,13 @@
     NSDictionary *photonicsInfo = @{PLACE_NAME : @"PHOTONICS", OBJ_ID : @"wGK6akcNh9"};
     [placeInfo addObject:photonicsInfo];
     
-    /* Dining Halls */
+    // Photonics Lab 305/307
+    NSDictionary *lab305Info = @{PLACE_NAME : @"PHO 305/307", OBJ_ID : @"YU2njb4jjU"};
+    [placeInfo addObject:lab305Info];
     
-    // Warren
-    NSDictionary *warrenDhInfo = @{PLACE_NAME : @"WARREN DINING HALL", OBJ_ID : @"YU2njb4jjU"};
-    [placeInfo addObject:warrenDhInfo];
-    
-    // West
-    NSDictionary *westDhInfo = @{PLACE_NAME : @"WEST DINING HALL", OBJ_ID : @"0x77bPxb3V"};
-    [placeInfo addObject:westDhInfo];
+    // Photonics Lab 115
+    NSDictionary *pho115Info = @{PLACE_NAME : @"PHO 115", OBJ_ID : @"0x77bPxb3V"};
+    [placeInfo addObject:pho115Info];
     
     /* Social */
     
