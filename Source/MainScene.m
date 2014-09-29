@@ -20,8 +20,11 @@
     CCTableView *_tableView;
     CCNode *_tableViewNode;
     
-    // Popup boolean
+    // Info Popup flag
     BOOL isPopupOpen;
+    
+    // Contact popup flag
+    BOOL isContactOpen;
     
     // All Places
     NSMutableArray *_allCells;
@@ -44,6 +47,9 @@
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
     isPopupOpen = [[[NSUserDefaults standardUserDefaults] objectForKey:@"isPopupOpen"] boolValue];
     
+    // Load NSUser isContactOpen
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isContactOpen"];
+    isContactOpen = [[[NSUserDefaults standardUserDefaults] objectForKey:@"isContactOpen"] boolValue];
     
     // Sync NSUserDefaults
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -293,8 +299,8 @@
         [self togglePopupBool];
     }
     
-    // If a popup is not already open
-    else
+    // If a info popup and a contact popup are not already open
+    else if (!isPopupOpen || !isContactOpen)
     {
         // Enable user interaction
         self.userInteractionEnabled = YES;
@@ -341,15 +347,28 @@
 
 - (void)contactButton
 {
-    // Loads contact popup
-    ContactPopup *contactPopup = (ContactPopup *)[CCBReader load:@"ContactPopup"];
+    // Load contact popup flag
+    isContactOpen = [[[NSUserDefaults standardUserDefaults] objectForKey:@"isContactOpen"] boolValue];
     
-    // Position the popup
-    contactPopup.positionType = CCPositionTypeNormalized;
-    contactPopup.position = ccp(0.5,0.5);
+    // If a contact and info popup are not open
+    if (!isContactOpen || !isPopupOpen)
+    {
+        // Loads contact popup
+        ContactPopup *contactPopup = (ContactPopup *)[CCBReader load:@"ContactPopup"];
     
-    // Add child to main scene
-    [self addChild:contactPopup];
+        // Position the popup
+        contactPopup.positionType = CCPositionTypeNormalized;
+        contactPopup.position = ccp(0.5,0.5);
+    
+        // Add child to main scene
+        [self addChild:contactPopup];
+    
+        // Set contact popup flag to true
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isContactOpen"];
+        
+        // Sync NSUserDefaults
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
 
 @end
