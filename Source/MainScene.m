@@ -282,9 +282,6 @@
     // Check if a popup is already open
     if (isPopupOpen)
     {
-        // Disable user interaction
-        self.userInteractionEnabled = NO;
-        
         // If it is, close it
         [self removeChild:self.currentPopup];
         
@@ -292,12 +289,9 @@
         [self togglePopupBool];
     }
     
-    // If a info popup and a contact popup are not already open
+    // Else, info popup is not already open
     else
     {
-        // Enable user interaction
-        self.userInteractionEnabled = YES;
-        
         // Load the place's popup
         InfoPopup *infoPopup = (InfoPopup *)[CCBReader load:@"InfoPopup"];
         
