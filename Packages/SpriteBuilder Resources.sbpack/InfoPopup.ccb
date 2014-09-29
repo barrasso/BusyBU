@@ -137,8 +137,6 @@
 						<real>0.80000001192092896</real>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1108,7 +1106,7 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>Not Busy</string>
+							<string>Open</string>
 							<false/>
 						</array>
 					</dict>
@@ -1554,7 +1552,7 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>Kinda</string>
+							<string>Mild</string>
 							<false/>
 						</array>
 					</dict>
@@ -2000,7 +1998,7 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>It's Busy</string>
+							<string>Full</string>
 							<false/>
 						</array>
 					</dict>
