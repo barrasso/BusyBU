@@ -7,7 +7,6 @@
 //
 
 #import "InfoPopup.h"
-#import "MainScene.h"
 #import <Parse/Parse.h>
 
 @implementation InfoPopup

@@ -11,9 +11,6 @@
 
 @interface InfoPopup : CCNode <UIAlertViewDelegate>
 
-// Main Scene
-@property (nonatomic, weak) MainScene *mainScene;
-
 // Displays the place's name
 @property (strong) CCLabelTTF *placeNameLabel;
 
