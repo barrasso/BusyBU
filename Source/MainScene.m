@@ -23,9 +23,6 @@
     // Info Popup flag
     BOOL isPopupOpen;
     
-    // Contact popup flag
-    BOOL isContactOpen;
-    
     // All Places
     NSMutableArray *_allCells;
     
@@ -46,10 +43,6 @@
     // Load NSUser isPopupOpen
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
     isPopupOpen = [[[NSUserDefaults standardUserDefaults] objectForKey:@"isPopupOpen"] boolValue];
-    
-    // Load NSUser isContactOpen
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isContactOpen"];
-    isContactOpen = [[[NSUserDefaults standardUserDefaults] objectForKey:@"isContactOpen"] boolValue];
     
     // Sync NSUserDefaults
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -300,7 +293,7 @@
     }
     
     // If a info popup and a contact popup are not already open
-    else if (!isPopupOpen || !isContactOpen)
+    else
     {
         // Enable user interaction
         self.userInteractionEnabled = YES;
@@ -347,11 +340,8 @@
 
 - (void)contactButton
 {
-    // Load contact popup flag
-    isContactOpen = [[[NSUserDefaults standardUserDefaults] objectForKey:@"isContactOpen"] boolValue];
-    
     // If a contact and info popup are not open
-    if ((!isContactOpen) && (!isPopupOpen))
+    if (!isPopupOpen)
     {
         // Loads contact popup
         ContactPopup *contactPopup = (ContactPopup *)[CCBReader load:@"ContactPopup"];
@@ -362,9 +352,6 @@
     
         // Add child to main scene
         [self addChild:contactPopup];
-    
-        // Set contact popup flag to true
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isContactOpen"];
     }
 }
 
