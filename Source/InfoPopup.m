@@ -52,6 +52,7 @@
 
 #pragma mark - Selectors
 
+/* RATE LOCATION NOT BUSY */
 - (void)notBusy
 {
     // Load NSUserDefaults boolean
@@ -98,6 +99,7 @@
     }
 }
 
+/* RATE LOCATION MILDLY BUSY */
 - (void)kindaBusy
 {
     // Load NSUserDefaults boolean
@@ -144,6 +146,7 @@
     }
 }
 
+/* RATE LOCATION BUSY */
 - (void)itsBusy
 {
     // Load NSUserDefaults boolean
