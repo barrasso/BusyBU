@@ -463,8 +463,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1801,7 +1799,7 @@ EMAIL US: busybuapp@gmail.com</string>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>White</string>
+				<string>White Node</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
