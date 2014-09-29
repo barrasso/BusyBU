@@ -8,6 +8,7 @@
 
 #import "MainScene.h"
 #import "InfoPopup.h"
+#import "ContactPopup.h"
 #import "PlaceCell.h"
 #import "PlaceData.h"
 #import "PlaceObject.h"
@@ -336,6 +337,19 @@
 {
     // Refresh list when clicked
     [_tableView reloadData];
+}
+
+- (void)contactButton
+{
+    // Loads contact popup
+    ContactPopup *contactPopup = (ContactPopup *)[CCBReader load:@"ContactPopup"];
+    
+    // Position the popup
+    contactPopup.positionType = CCPositionTypeNormalized;
+    contactPopup.position = ccp(0.5,0.5);
+    
+    // Add child to main scene
+    [self addChild:contactPopup];
 }
 
 @end

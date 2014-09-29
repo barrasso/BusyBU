@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0405C5F719B7B274003819A8 /* PlaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0405C5F619B7B274003819A8 /* PlaceObject.m */; };
+		0406923119D9A6A70018FE21 /* ContactPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406923019D9A6A70018FE21 /* ContactPopup.m */; };
 		043D51C719B41A41003589AC /* PlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D51C619B41A41003589AC /* PlaceCell.m */; };
 		043D51F919B664C9003589AC /* PlaceData.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D51F819B664C9003589AC /* PlaceData.m */; };
 		0491A4BF19C75C5000DE6076 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4BC19C75C5000DE6076 /* Bolts.framework */; };
@@ -74,6 +75,8 @@
 /* Begin PBXFileReference section */
 		0405C5F519B7B274003819A8 /* PlaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceObject.h; path = Source/PlaceObject.h; sourceTree = "<group>"; };
 		0405C5F619B7B274003819A8 /* PlaceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceObject.m; path = Source/PlaceObject.m; sourceTree = "<group>"; };
+		0406922F19D9A6A70018FE21 /* ContactPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactPopup.h; path = Source/ContactPopup.h; sourceTree = "<group>"; };
+		0406923019D9A6A70018FE21 /* ContactPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactPopup.m; path = Source/ContactPopup.m; sourceTree = "<group>"; };
 		043D51C519B41A41003589AC /* PlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceCell.h; path = Source/PlaceCell.h; sourceTree = "<group>"; };
 		043D51C619B41A41003589AC /* PlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceCell.m; path = Source/PlaceCell.m; sourceTree = "<group>"; };
 		043D51F719B664C9003589AC /* PlaceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceData.h; path = Source/PlaceData.h; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 				043D51C619B41A41003589AC /* PlaceCell.m */,
 				0496164C19BF9C2F00E11E00 /* InfoPopup.h */,
 				0496164D19BF9C2F00E11E00 /* InfoPopup.m */,
+				0406922F19D9A6A70018FE21 /* ContactPopup.h */,
+				0406923019D9A6A70018FE21 /* ContactPopup.m */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0405C5F719B7B274003819A8 /* PlaceObject.m in Sources */,
+				0406923119D9A6A70018FE21 /* ContactPopup.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
