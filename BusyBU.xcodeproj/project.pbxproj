@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0405C5F719B7B274003819A8 /* PlaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0405C5F619B7B274003819A8 /* PlaceObject.m */; };
 		0406923119D9A6A70018FE21 /* ContactPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406923019D9A6A70018FE21 /* ContactPopup.m */; };
+		0406923919D9CF760018FE21 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0406923819D9CF760018FE21 /* Images.xcassets */; };
+		0406923D19D9CFB50018FE21 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0406923C19D9CFB50018FE21 /* StoreKit.framework */; };
+		0406923F19D9D11A0018FE21 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0406923E19D9D11A0018FE21 /* Images.xcassets */; };
 		043D51C719B41A41003589AC /* PlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D51C619B41A41003589AC /* PlaceCell.m */; };
 		043D51F919B664C9003589AC /* PlaceData.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D51F819B664C9003589AC /* PlaceData.m */; };
 		0491A4BF19C75C5000DE6076 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4BC19C75C5000DE6076 /* Bolts.framework */; };
@@ -18,7 +21,6 @@
 		0491A4C719C75C9400DE6076 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4C619C75C9400DE6076 /* libz.dylib */; };
 		0491A4C919C75C9D00DE6076 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4C819C75C9D00DE6076 /* MobileCoreServices.framework */; };
 		0491A4CB19C75CAD00DE6076 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4CA19C75CAD00DE6076 /* Security.framework */; };
-		0491A4CD19C75CC200DE6076 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4CC19C75CC200DE6076 /* StoreKit.framework */; };
 		0491A4CF19C75CCA00DE6076 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4CE19C75CCA00DE6076 /* SystemConfiguration.framework */; };
 		0491A4D119C75D8800DE6076 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4D019C75D8800DE6076 /* Social.framework */; };
 		0491A4D319C75D9900DE6076 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0491A4D219C75D9900DE6076 /* Twitter.framework */; };
@@ -77,6 +79,9 @@
 		0405C5F619B7B274003819A8 /* PlaceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceObject.m; path = Source/PlaceObject.m; sourceTree = "<group>"; };
 		0406922F19D9A6A70018FE21 /* ContactPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactPopup.h; path = Source/ContactPopup.h; sourceTree = "<group>"; };
 		0406923019D9A6A70018FE21 /* ContactPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactPopup.m; path = Source/ContactPopup.m; sourceTree = "<group>"; };
+		0406923819D9CF760018FE21 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WhatsBusy/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		0406923C19D9CFB50018FE21 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0406923E19D9D11A0018FE21 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		043D51C519B41A41003589AC /* PlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceCell.h; path = Source/PlaceCell.h; sourceTree = "<group>"; };
 		043D51C619B41A41003589AC /* PlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceCell.m; path = Source/PlaceCell.m; sourceTree = "<group>"; };
 		043D51F719B664C9003589AC /* PlaceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceData.h; path = Source/PlaceData.h; sourceTree = "<group>"; };
@@ -87,7 +92,6 @@
 		0491A4C619C75C9400DE6076 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		0491A4C819C75C9D00DE6076 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		0491A4CA19C75CAD00DE6076 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		0491A4CC19C75CC200DE6076 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		0491A4CE19C75CCA00DE6076 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0491A4D019C75D8800DE6076 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		0491A4D219C75D9900DE6076 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
@@ -118,7 +122,7 @@
 		B73789861807631A0076A88C /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = Source/Prefix.pch; sourceTree = SOURCE_ROOT; };
 		B7378992180767190076A88C /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = Source/MainScene.h; sourceTree = "<group>"; };
 		B7378993180767190076A88C /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainScene.m; path = Source/MainScene.m; sourceTree = "<group>"; };
-		B77F1B2E17B978D7009739AE /* WhatsBusy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsBusy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B77F1B2E17B978D7009739AE /* BusyBU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusyBU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77F1B3117B978D7009739AE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B77F1B3317B978D7009739AE /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		B77F1B3517B978D7009739AE /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -140,7 +144,6 @@
 				0491A4D319C75D9900DE6076 /* Twitter.framework in Frameworks */,
 				0491A4D119C75D8800DE6076 /* Social.framework in Frameworks */,
 				0491A4CF19C75CCA00DE6076 /* SystemConfiguration.framework in Frameworks */,
-				0491A4CD19C75CC200DE6076 /* StoreKit.framework in Frameworks */,
 				0491A4CB19C75CAD00DE6076 /* Security.framework in Frameworks */,
 				B77F1B3217B978D7009739AE /* QuartzCore.framework in Frameworks */,
 				0491A4C919C75C9D00DE6076 /* MobileCoreServices.framework in Frameworks */,
@@ -149,6 +152,7 @@
 				0491A4C419C75C7400DE6076 /* CFNetwork.framework in Frameworks */,
 				8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */,
 				B737898A1807642B0076A88C /* libcocos2d.a in Frameworks */,
+				0406923D19D9CFB50018FE21 /* StoreKit.framework in Frameworks */,
 				0491A4BF19C75C5000DE6076 /* Bolts.framework in Frameworks */,
 				B77F1B3417B978D7009739AE /* OpenGLES.framework in Frameworks */,
 				B77F1B3617B978D7009739AE /* OpenAL.framework in Frameworks */,
@@ -258,6 +262,7 @@
 		B77F1B2517B978D7009739AE = {
 			isa = PBXGroup;
 			children = (
+				0406923E19D9D11A0018FE21 /* Images.xcassets */,
 				B737893C1807616C0076A88C /* Source */,
 				B77F1B4617B978D7009739AE /* Resources */,
 				9222E2B918734FF800A246C7 /* libs */,
@@ -270,7 +275,7 @@
 		B77F1B2F17B978D7009739AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B77F1B2E17B978D7009739AE /* WhatsBusy.app */,
+				B77F1B2E17B978D7009739AE /* BusyBU.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,11 +283,11 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0406923C19D9CFB50018FE21 /* StoreKit.framework */,
 				0491A4D419C88F2C00DE6076 /* Accounts.framework */,
 				0491A4D219C75D9900DE6076 /* Twitter.framework */,
 				0491A4D019C75D8800DE6076 /* Social.framework */,
 				0491A4CE19C75CCA00DE6076 /* SystemConfiguration.framework */,
-				0491A4CC19C75CC200DE6076 /* StoreKit.framework */,
 				0491A4CA19C75CAD00DE6076 /* Security.framework */,
 				0491A4C819C75C9D00DE6076 /* MobileCoreServices.framework */,
 				0491A4C619C75C9400DE6076 /* libz.dylib */,
@@ -308,6 +313,7 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0406923819D9CF760018FE21 /* Images.xcassets */,
 				B73789911807667A0076A88C /* Icons */,
 				B737893A180761570076A88C /* Published-iOS */,
 			);
@@ -327,9 +333,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B77F1B2D17B978D7009739AE /* WhatsBusy */ = {
+		B77F1B2D17B978D7009739AE /* BusyBU */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "WhatsBusy" */;
+			buildConfigurationList = B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "BusyBU" */;
 			buildPhases = (
 				D2E0167A18D782EC00927430 /* Run Script */,
 				B77F1B2A17B978D7009739AE /* Sources */,
@@ -341,9 +347,9 @@
 			dependencies = (
 				B7378989180764180076A88C /* PBXTargetDependency */,
 			);
-			name = WhatsBusy;
+			name = BusyBU;
 			productName = Example;
-			productReference = B77F1B2E17B978D7009739AE /* WhatsBusy.app */;
+			productReference = B77F1B2E17B978D7009739AE /* BusyBU.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -361,11 +367,14 @@
 							com.apple.GameCenter = {
 								enabled = 0;
 							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
 						};
 					};
 				};
 			};
-			buildConfigurationList = B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "WhatsBusy" */;
+			buildConfigurationList = B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "BusyBU" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -383,7 +392,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				B77F1B2D17B978D7009739AE /* WhatsBusy */,
+				B77F1B2D17B978D7009739AE /* BusyBU */,
 			);
 		};
 /* End PBXProject section */
@@ -404,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B71F5919188484E7003F4D28 /* Settings.png in Resources */,
+				0406923919D9CF760018FE21 /* Images.xcassets in Resources */,
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
@@ -413,6 +423,7 @@
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
+				0406923F19D9D11A0018FE21 /* Images.xcassets in Resources */,
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
@@ -534,6 +545,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -561,7 +574,7 @@
 					"-lsqlite3",
 					"-ObjC",
 				);
-				PRODUCT_NAME = WhatsBusy;
+				PRODUCT_NAME = BusyBU;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -571,6 +584,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -596,7 +611,7 @@
 					"-lsqlite3",
 					"-ObjC",
 				);
-				PRODUCT_NAME = WhatsBusy;
+				PRODUCT_NAME = BusyBU;
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -606,7 +621,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "WhatsBusy" */ = {
+		B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "BusyBU" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B77F1CDC17B978D8009739AE /* Debug */,
@@ -615,7 +630,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "WhatsBusy" */ = {
+		B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "BusyBU" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B77F1CDF17B978D8009739AE /* Debug */,

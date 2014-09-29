@@ -351,7 +351,7 @@
     isContactOpen = [[[NSUserDefaults standardUserDefaults] objectForKey:@"isContactOpen"] boolValue];
     
     // If a contact and info popup are not open
-    if (!isContactOpen || !isPopupOpen)
+    if ((!isContactOpen) && (!isPopupOpen))
     {
         // Loads contact popup
         ContactPopup *contactPopup = (ContactPopup *)[CCBReader load:@"ContactPopup"];
@@ -365,9 +365,6 @@
     
         // Set contact popup flag to true
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isContactOpen"];
-        
-        // Sync NSUserDefaults
-        [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }
 
