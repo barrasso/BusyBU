@@ -35,9 +35,9 @@
     NSDictionary *mugarInfo = @{PLACE_NAME : @"MUGAR", OBJ_ID : @"hJjLOuPs3d"};
     [placeInfo addObject:mugarInfo];
     
-    // Photonics
-    NSDictionary *photonicsInfo = @{PLACE_NAME : @"PHOTONICS", OBJ_ID : @"wGK6akcNh9"};
-    [placeInfo addObject:photonicsInfo];
+    // Engineering Library
+    NSDictionary *englibInfo = @{PLACE_NAME : @"ENG LIBRARY", OBJ_ID : @"wGK6akcNh9"};
+    [placeInfo addObject:englibInfo];
     
     // Photonics Lab 305/307
     NSDictionary *lab305Info = @{PLACE_NAME : @"PHO 305/307", OBJ_ID : @"YU2njb4jjU"};
@@ -47,12 +47,13 @@
     NSDictionary *pho115Info = @{PLACE_NAME : @"PHO 115", OBJ_ID : @"0x77bPxb3V"};
     [placeInfo addObject:pho115Info];
     
+    // Photonics Lab 113
+    NSDictionary *pho113Info = @{PLACE_NAME : @"PHO 113", OBJ_ID : @"UkMbFaZpuH"};
+    [placeInfo addObject:pho113Info];
+    
+    
     /* Social */
-    
-    // BU Pub
-    NSDictionary *buPubInfo = @{PLACE_NAME : @"BU PUB", OBJ_ID : @"UkMbFaZpuH"};
-    [placeInfo addObject:buPubInfo];
-    
+
     // T's Pub
     NSDictionary *tPubInfo = @{PLACE_NAME : @"T'S PUB", OBJ_ID : @"aULkZ3oA7k"};
     [placeInfo addObject:tPubInfo];

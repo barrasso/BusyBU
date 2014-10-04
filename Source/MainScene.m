@@ -228,18 +228,30 @@
          /* Extraneous Cases */
          // Check if there are equal opposite requests
          if ((notBusyRequests == busyRequests) && (notBusyRequests == mildRequests) && (mildRequests == busyRequests))
-             place.status = @"TROLLS";
+             place.status = @"OPEN";
                 
          // Set the cell's color
-         if ([place.status isEqualToString:@"BUSY"])
+         if ([place.status isEqualToString:@"BUSY"]) {
              // Red Color
              cellContent.placeColor.color = [CCColor colorWithRed:0.5f green:0.f blue:0.f];
-         else if ([place.status isEqualToString:@"MILD"])
+             
+             // Set status label
+             cellContent.statusLabel.string = @"is busy";
+         }
+         else if ([place.status isEqualToString:@"MILD"]) {
              // Blue Color
              cellContent.placeColor.color = [CCColor colorWithRed:0.f green:0.f blue:0.5f];
-         else
+             
+             // Set status label
+             cellContent.statusLabel.string = @"is mildly busy";
+         }
+         else {
              // Green Color
              cellContent.placeColor.color = [CCColor colorWithRed:0.f green:0.5f blue:0.f];
+             
+             // Set status label
+             cellContent.statusLabel.string = @"is not busy";
+         }
      }];
     
     // Add cellContent to cell

@@ -10,8 +10,11 @@
 
 @interface PlaceCell : CCNode
 
-// PLace Label
+// Place Label
 @property (strong) CCLabelTTF *placeLabel;
+
+// Status Label
+@property (strong) CCLabelTTF *statusLabel;
 
 // Place Color
 @property (strong) CCNodeColor *placeColor;
