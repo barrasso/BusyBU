@@ -1,0 +1,377 @@
+{
+    "assets": [
+        {
+            "asset": "Source/Resources/Icons/Settings.png", 
+            "target": "Settings.png"
+        }, 
+        {
+            "asset": "Source/Resources/Default@2x.png", 
+            "target": "Default@2x.png"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/iPad@2x.png", 
+            "target": "iPad@2x.png"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/iPad.png", 
+            "target": "iPad.png"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/iPad-old@2x.png", 
+            "target": "iPad-old@2x.png"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/iPhone-old@2x.png", 
+            "target": "iPhone-old@2x.png"
+        }, 
+        {
+            "asset": "Source/Resources/Published-iOS", 
+            "target": "Published-iOS"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/Settings@2x.png", 
+            "target": "Settings@2x.png"
+        }, 
+        {
+            "asset": "Source/Resources/Default-Landscape~ipad.png", 
+            "target": "Default-Landscape~ipad.png"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/iPhone-old.png", 
+            "target": "iPhone-old.png"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/iPhone.png", 
+            "target": "iPhone.png"
+        }, 
+        {
+            "asset": "Source/Resources/Default-568h@2x.png", 
+            "target": "Default-568h@2x.png"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/iPhone@2x.png", 
+            "target": "iPhone@2x.png"
+        }, 
+        {
+            "asset": "Source/Resources/Default.png", 
+            "target": "Default.png"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/iPad-old.png", 
+            "target": "iPad-old.png"
+        }, 
+        {
+            "asset": "WhatsBusy/Images.xcassets", 
+            "target": null
+        }, 
+        {
+            "asset": "Images.xcassets", 
+            "target": null
+        }
+    ], 
+    "config": {
+        "APPLICATION_FULL_NAME": "BusyBU", 
+        "APPLICATION_IDENTIFIER": "com.mebproductions.whatsbusy", 
+        "APPLICATION_NAME": "BusyBU", 
+        "LONG_VERSION": "0.1.1", 
+        "TEMPLATE_VALUES": {
+            "EXECUTABLE_NAME": "BusyBU", 
+            "PRODUCT_NAME": "BusyBU"
+        }
+    }, 
+    "defines": {
+        "NDEBUG": 1, 
+        "NS_BLOCK_ASSERTIONS": 1, 
+        "OBJC_OLD_DISPATCH_PROTOTYPES": 0, 
+        "__IPHONE_OS_VERSION_MIN_REQUIRED": 50100
+    }, 
+    "deps": [
+        "UIKit", 
+        "Accounts", 
+        "Twitter", 
+        "Social", 
+        "SystemConfiguration", 
+        "Security", 
+        "QuartzCore", 
+        "MobileCoreServices", 
+        "CoreLocation", 
+        "CFNetwork", 
+        "GLKit", 
+        "StoreKit", 
+        "Bolts", 
+        "OpenGLES", 
+        "OpenAL", 
+        "Parse", 
+        "AudioToolbox", 
+        "AVFoundation", 
+        "UIKit", 
+        "Foundation", 
+        "CoreGraphics", 
+        "CoreText"
+    ], 
+    "flags": [
+        "-fobjc-arc", 
+        "-fasm-blocks", 
+        {
+            "flag": "-std=gnu99", 
+            "not_type": "c++"
+        }, 
+        {
+            "flag": "-fgnu-keywords", 
+            "not_type": "c++"
+        }, 
+        "-fno-asm", 
+        "-fpascal-strings", 
+        "-Wempty-body", 
+        "-Wshorten-64-to-32", 
+        "-Wno-deprecated-declarations", 
+        "-Wreturn-type", 
+        "-Wswitch", 
+        "-Wparentheses", 
+        "-Wformat", 
+        "-Wuninitialized", 
+        "-Wunused-function", 
+        "-Wunused-value", 
+        "-Wunused-variable", 
+        {
+            "flag": "-Winvalid-offsetof", 
+            "type": "c++"
+        }, 
+        {
+            "flag": "-Wprotocol", 
+            "type": "objc"
+        }, 
+        {
+            "flag": "-Wundeclared-selector", 
+            "type": "objc"
+        }
+    ], 
+    "header_paths": [
+        {
+            "header_path": "BusyBU-generated-files.hmap", 
+            "hmap": {}, 
+            "type": "iquote"
+        }, 
+        {
+            "header_path": "BusyBU-own-target-headers.hmap", 
+            "hmap": {}, 
+            "type": "I"
+        }, 
+        {
+            "header_path": "BusyBU-all-target-headers.hmap", 
+            "hmap": {}, 
+            "type": "I"
+        }, 
+        {
+            "header_path": "BusyBU-project-headers.hmap", 
+            "hmap": {
+                "AppDelegate.h": {
+                    "key": "AppDelegate.h", 
+                    "prefix": "Source/", 
+                    "suffix": "AppDelegate.h"
+                }, 
+                "ContactPopup.h": {
+                    "key": "ContactPopup.h", 
+                    "prefix": "Source/", 
+                    "suffix": "ContactPopup.h"
+                }, 
+                "InfoPopup.h": {
+                    "key": "InfoPopup.h", 
+                    "prefix": "Source/", 
+                    "suffix": "InfoPopup.h"
+                }, 
+                "MainScene.h": {
+                    "key": "MainScene.h", 
+                    "prefix": "Source/", 
+                    "suffix": "MainScene.h"
+                }, 
+                "PlaceCell.h": {
+                    "key": "PlaceCell.h", 
+                    "prefix": "Source/", 
+                    "suffix": "PlaceCell.h"
+                }, 
+                "PlaceData.h": {
+                    "key": "PlaceData.h", 
+                    "prefix": "Source/", 
+                    "suffix": "PlaceData.h"
+                }, 
+                "PlaceObject.h": {
+                    "key": "PlaceObject.h", 
+                    "prefix": "Source/", 
+                    "suffix": "PlaceObject.h"
+                }, 
+                "Prefix.pch": {
+                    "key": "Prefix.pch", 
+                    "prefix": "Source/", 
+                    "suffix": "Prefix.pch"
+                }
+            }, 
+            "type": "iquote"
+        }, 
+        {
+            "header_path": "/var/folders/w4/92z2fx511rq77tvvmgt6mgx40000gn/T/tmpdHq5CZ/BUILT_PRODUCTS_DIR/include", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/kazmath/include", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/cocos2d", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/cocos2d/Platforms", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/cocos2d/Support", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/cocos2d/Platforms/iOS", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/cocos2d/Platforms/Mac", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/Chipmunk/objectivec/include", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/Chipmunk/include", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/cocos2d-ui", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/cocos2d-ui/CCBReader", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/ObjectAL", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/ObjectAL/Actions", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/ObjectAL/AudioTrack", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/ObjectAL/OpenAL", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/ObjectAL/Session", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/ObjectAL/Support", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "/var/folders/w4/92z2fx511rq77tvvmgt6mgx40000gn/T/tmpdHq5CZ/DERIVED_FILE_DIR/armv7", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "/var/folders/w4/92z2fx511rq77tvvmgt6mgx40000gn/T/tmpdHq5CZ/DERIVED_FILE_DIR", 
+            "type": "I"
+        }
+    ], 
+    "infoplists": [
+        "./Source/Resources/Info.plist"
+    ], 
+    "libs": [
+        "z", 
+        "sqlite3", 
+        "z"
+    ], 
+    "modules": [
+        {
+            "build_cwd": "Source/libs/cocos2d-iphone", 
+            "project": "cocos2d-ios", 
+            "project_config": "Release", 
+            "target": "cocos2d"
+        }, 
+        {
+            "build_cwd": "Source/libs/cocos2d-iphone", 
+            "project": "Chipmunk7-ios", 
+            "project_config": "Release", 
+            "target": "ObjectiveChipmunk-iPhone"
+        }
+    ], 
+    "pchs": [
+        "./Source/Prefix.pch"
+    ], 
+    "sources": [
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "Source/AppDelegate.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "Source/ContactPopup.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "Source/InfoPopup.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "Source/MainScene.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "Source/PlaceCell.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "Source/PlaceData.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "Source/PlaceObject.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "Source/main.m"
+        }
+    ], 
+    "storyboards": [], 
+    "type": "app", 
+    "version": "3", 
+    "xcdatamodels": [], 
+    "xcode_project": "BusyBU.xcodeproj", 
+    "xibs": []
+}

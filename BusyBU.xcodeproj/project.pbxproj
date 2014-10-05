@@ -359,7 +359,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
-				ORGANIZATIONNAME = Apportable;
+				ORGANIZATIONNAME = MEB;
 				TargetAttributes = {
 					B77F1B2D17B978D7009739AE = {
 						DevelopmentTeam = 3GBQ2H4QX7;
