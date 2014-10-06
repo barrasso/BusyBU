@@ -364,6 +364,9 @@
 					B77F1B2D17B978D7009739AE = {
 						DevelopmentTeam = 3GBQ2H4QX7;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
 							com.apple.GameCenter = {
 								enabled = 0;
 							};

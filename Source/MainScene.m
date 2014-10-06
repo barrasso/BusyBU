@@ -64,6 +64,10 @@
     
     // Sets up the main table view
     [self setupTableView];
+    
+    
+    CCLOG(@"Current Time: %i", [self getHourFromCurrentTime]);
+
 }
 
 - (void)dealloc
@@ -334,6 +338,29 @@
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
     else
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isPopupOpen"];
+}
+
+// Get the current hour value (0-23)
+- (int)getHourFromCurrentTime
+{
+    // Init hour variable
+    int hour;
+    
+    // Init calendar variable
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    
+    // Get current date
+    NSDate *now = [NSDate date];
+    
+    // Set Timezone to Boston
+    NSTimeZone *tz = [NSTimeZone timeZoneWithName:@"America/Boston"];
+    [cal setTimeZone:tz];
+    
+    // Extract hour from date
+    NSDateComponents *comp = [cal components:NSHourCalendarUnit|NSMinuteCalendarUnit fromDate:now];
+    hour = [comp hour];
+    
+    return hour;
 }
 
 #pragma mark - Selectors
