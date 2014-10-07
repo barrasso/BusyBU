@@ -170,14 +170,14 @@ const static int timeToUpdate = 1;
          // Get values of object's BUSY requests
          int busyRequests = [[placeObj objectForKey:@"BR"] intValue];
          
-         // Figure out if the location has not been updated in a while 
+         // Figure out if the location has not been updated in a while
          int timeSinceLastUpdate = currentTime - hourLastUpdated;
          
          // If the place hasn't been updated in a while
          // Or timeSinceLastUpdate is negative
          if ((timeSinceLastUpdate > timeToUpdate) || (timeSinceLastUpdate < 0))
         {
-            // Then reset the request values
+            // Then reset the request values to zero
              busyRequests = 0;
              mildRequests = 0;
              notBusyRequests = 0;
