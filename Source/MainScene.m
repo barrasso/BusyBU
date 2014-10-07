@@ -158,6 +158,9 @@ const static int timeToUpdate = 1;
     // Get place by parse object ID
     [query getObjectInBackgroundWithId:place.objID block:^(PFObject *placeObj, NSError *error)
      {
+         // Get the time the object was last updated at
+         NSString *timeUpdatedAt = [placeObj objectForKey:@"timeUpdatedAt"];
+         
          // Get value of last hour the object was updated at
          int hourLastUpdated = [[placeObj objectForKey:@"HourLastUpdated"] intValue];
          
@@ -182,6 +185,9 @@ const static int timeToUpdate = 1;
              mildRequests = 0;
              notBusyRequests = 0;
          }
+         
+         // Set time updated at label
+         cellContent.updatedAtLabel.string = [NSString stringWithFormat:@"Updated at:\n%@",timeUpdatedAt];
          
          /*  Main Cases */
          // Check if there are mostly not busy requests
