@@ -63,6 +63,9 @@
         // Get place by parse object ID
         [query getObjectInBackgroundWithId:self.objectIDLabel.string block:^(PFObject *placeObj, NSError *error)
          {
+             // Set the timeUpdatedAt
+             placeObj[@"timeUpdatedAt"] = [self getUpdatedAtTime];
+             
              // Set the HourLastUpdated
              placeObj[@"HourLastUpdated"] = [self getHourFromCurrentTime];
              
@@ -113,6 +116,9 @@
         // Get place by parse object ID
         [query getObjectInBackgroundWithId:self.objectIDLabel.string block:^(PFObject *placeObj, NSError *error)
          {
+             // Set the timeUpdatedAt
+             placeObj[@"timeUpdatedAt"] = [self getUpdatedAtTime];
+             
              // Set the HourLastUpdated
              placeObj[@"HourLastUpdated"] = [self getHourFromCurrentTime];
              
@@ -163,6 +169,9 @@
         // Get place by parse object ID
         [query getObjectInBackgroundWithId:self.objectIDLabel.string block:^(PFObject *placeObj, NSError *error)
          {
+             // Set the timeUpdatedAt
+             placeObj[@"timeUpdatedAt"] = [self getUpdatedAtTime];
+             
              // Set the HourLastUpdated
              placeObj[@"HourLastUpdated"] = [self getHourFromCurrentTime];
              
@@ -230,6 +239,39 @@
     lastHourUpdated = [NSString stringWithFormat:@"%i",hour];
     
     return lastHourUpdated;
+}
+
+// Get updated at time
+- (NSString *)getUpdatedAtTime
+{
+    // Init hour int
+    int hour;
+    
+    // Init minute int
+    int minute;
+    
+    // Init time string
+    NSString *timeUpdatedAt;
+    
+    // Init calendar variable
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    
+    // Get current date
+    NSDate *now = [NSDate date];
+    
+    // Set Timezone to Boston
+    NSTimeZone *tz = [NSTimeZone timeZoneWithName:@"America/Boston"];
+    [cal setTimeZone:tz];
+    
+    // Extract hour from date
+    NSDateComponents *comp = [cal components:NSHourCalendarUnit|NSMinuteCalendarUnit fromDate:now];
+    hour = [comp hour];
+    minute = [comp minute];
+    
+    // Format time string
+    timeUpdatedAt = [NSString stringWithFormat:@"%i:%i", hour, minute];
+    
+    return timeUpdatedAt;
 }
 
 @end

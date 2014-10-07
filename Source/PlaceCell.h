@@ -16,6 +16,9 @@
 // Status Label
 @property (strong) CCLabelTTF *statusLabel;
 
+// Updated At Label
+@property (strong) CCLabelTTF *updatedAtLabel;
+
 // Place Color
 @property (strong) CCNodeColor *placeColor;
 

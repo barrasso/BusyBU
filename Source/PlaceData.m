@@ -39,6 +39,10 @@
     NSDictionary *ingallsInfo = @{PLACE_NAME : @"INGALLS", OBJ_ID : @"duQYkFbgqR"};
     [placeInfo addObject:ingallsInfo];
     
+    // Photonics Lobby
+    NSDictionary *phoInfo = @{PLACE_NAME : @"PHO LOBBY", OBJ_ID : @"AELxYmAzKm"};
+    [placeInfo addObject:phoInfo];
+    
     /* Labs */
     
     // Photonics Lab 305/307
