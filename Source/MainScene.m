@@ -14,8 +14,14 @@
 #import "PlaceObject.h"
 #import <Parse/Parse.h>
 
+// Default timeToUpdate a location (hours)
+const static int timeToUpdate = 1;
+
 @implementation MainScene
-{    
+{
+    // Curent Time
+    int currentTime;
+    
     // Table View
     CCTableView *_tableView;
     CCNode *_tableViewNode;
@@ -39,6 +45,9 @@
     
     // Init array to hold all cells
     _allCells = [[NSMutableArray alloc] init];
+    
+    // Get current time
+    currentTime = [self getHourFromCurrentTime];
     
     // Load NSUser isPopupOpen
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isPopupOpen"];
@@ -64,10 +73,6 @@
     
     // Sets up the main table view
     [self setupTableView];
-    
-    
-    CCLOG(@"Current Time: %i", [self getHourFromCurrentTime]);
-
 }
 
 - (void)dealloc
@@ -153,8 +158,8 @@
     // Get place by parse object ID
     [query getObjectInBackgroundWithId:place.objID block:^(PFObject *placeObj, NSError *error)
      {
-         // Get last hour updated
-         
+         // Get value of last hour the object was updated at
+         int hourLastUpdated = [[placeObj objectForKey:@"HourLastUpdated"] intValue];
          
          // Get values of object's NOT BUSY requests
          int notBusyRequests = [[placeObj objectForKey:@"NBR"] intValue];
@@ -164,6 +169,19 @@
 
          // Get values of object's BUSY requests
          int busyRequests = [[placeObj objectForKey:@"BR"] intValue];
+         
+         // Figure out if the location has not been updated in a while 
+         int timeSinceLastUpdate = currentTime - hourLastUpdated;
+         
+         // If the place hasn't been updated in a while
+         // Or timeSinceLastUpdate is negative
+         if ((timeSinceLastUpdate > timeToUpdate) || (timeSinceLastUpdate < 0))
+        {
+            // Then reset the request values
+             busyRequests = 0;
+             mildRequests = 0;
+             notBusyRequests = 0;
+         }
          
          /*  Main Cases */
          // Check if there are mostly not busy requests
@@ -235,8 +253,14 @@
          /* Extraneous Cases */
          // Check if there are equal opposite requests
          if ((notBusyRequests == busyRequests) && (notBusyRequests == mildRequests) && (mildRequests == busyRequests))
-             place.status = @"OPEN";
-                
+         {
+             // Set the parse object status
+             placeObj[@"Status"] = @"NOTBUSY";
+             
+             // Set the place object status
+             place.status = @"NOTBUSY";
+         }
+         
          // Set the cell's color
          if ([place.status isEqualToString:@"BUSY"]) {
              // Red Color
