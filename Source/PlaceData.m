@@ -45,17 +45,17 @@
     
     /* Labs */
     
-    // Photonics Lab 305/307
-    NSDictionary *lab305Info = @{PLACE_NAME : @"PHO 305/307", OBJ_ID : @"YU2njb4jjU"};
-    [placeInfo addObject:lab305Info];
-    
+    // Photonics Lab 105
+    NSDictionary *pho105Info = @{PLACE_NAME : @"PHO 105", OBJ_ID : @"UkMbFaZpuH"};
+    [placeInfo addObject:pho105Info];
+        
     // Photonics Lab 115//117
     NSDictionary *pho115Info = @{PLACE_NAME : @"PHO 115/117", OBJ_ID : @"0x77bPxb3V"};
     [placeInfo addObject:pho115Info];
     
-    // Photonics Lab 105
-    NSDictionary *pho105Info = @{PLACE_NAME : @"PHO 105", OBJ_ID : @"UkMbFaZpuH"};
-    [placeInfo addObject:pho105Info];
+    // Photonics Lab 305/307
+    NSDictionary *lab305Info = @{PLACE_NAME : @"PHO 305/307", OBJ_ID : @"YU2njb4jjU"};
+    [placeInfo addObject:lab305Info];
     
     /* Social */
     

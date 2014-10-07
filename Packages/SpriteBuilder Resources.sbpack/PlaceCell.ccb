@@ -208,7 +208,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>PLACE</string>
+							<string></string>
 							<false/>
 						</array>
 					</dict>
@@ -344,6 +344,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -514,7 +516,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>status</string>
+							<string></string>
 							<false/>
 						</array>
 					</dict>
@@ -721,8 +723,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Updated At:
-10:30 am</string>
+							<string></string>
 							<false/>
 						</array>
 					</dict>
@@ -858,8 +859,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
