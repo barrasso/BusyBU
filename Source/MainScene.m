@@ -153,13 +153,16 @@
     // Get place by parse object ID
     [query getObjectInBackgroundWithId:place.objID block:^(PFObject *placeObj, NSError *error)
      {
-         // Get values of object's NOT BUSY requests and add to placeholder array
+         // Get last hour updated
+         
+         
+         // Get values of object's NOT BUSY requests
          int notBusyRequests = [[placeObj objectForKey:@"NBR"] intValue];
          
-         // Get values of object's MILD requests and add to placeholder array
+         // Get values of object's MILD requests
          int mildRequests = [[placeObj objectForKey:@"MR"] intValue];
 
-         // Get values of object's BUSY requests and add to placeholder array
+         // Get values of object's BUSY requests
          int busyRequests = [[placeObj objectForKey:@"BR"] intValue];
          
          /*  Main Cases */

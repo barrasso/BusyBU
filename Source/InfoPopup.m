@@ -63,6 +63,9 @@
         // Get place by parse object ID
         [query getObjectInBackgroundWithId:self.objectIDLabel.string block:^(PFObject *placeObj, NSError *error)
          {
+             // Set the HourLastUpdated
+             placeObj[@"HourLastUpdated"] = [self getHourFromCurrentTime];
+             
              // Update status to rate not busy
              [placeObj incrementKey:@"NBR"];
              
@@ -110,6 +113,9 @@
         // Get place by parse object ID
         [query getObjectInBackgroundWithId:self.objectIDLabel.string block:^(PFObject *placeObj, NSError *error)
          {
+             // Set the HourLastUpdated
+             placeObj[@"HourLastUpdated"] = [self getHourFromCurrentTime];
+             
              // Update status to rate kinda busy
              [placeObj incrementKey:@"MR"];
              
@@ -157,6 +163,9 @@
         // Get place by parse object ID
         [query getObjectInBackgroundWithId:self.objectIDLabel.string block:^(PFObject *placeObj, NSError *error)
          {
+             // Set the HourLastUpdated
+             placeObj[@"HourLastUpdated"] = [self getHourFromCurrentTime];
+             
              // Update status to rate it is busy
              [placeObj incrementKey:@"BR"];
              
@@ -190,6 +199,37 @@
         // Close popup after rating
         [self removeFromParent];
     }
+}
+
+#pragma mark - Helper Methods
+
+// Get the current hour value (0-23)
+- (NSString *)getHourFromCurrentTime
+{
+    // Init hour int
+    int hour;
+    
+    // Init hour string
+    NSString *lastHourUpdated;
+    
+    // Init calendar variable
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    
+    // Get current date
+    NSDate *now = [NSDate date];
+    
+    // Set Timezone to Boston
+    NSTimeZone *tz = [NSTimeZone timeZoneWithName:@"America/Boston"];
+    [cal setTimeZone:tz];
+    
+    // Extract hour from date
+    NSDateComponents *comp = [cal components:NSHourCalendarUnit|NSMinuteCalendarUnit fromDate:now];
+    hour = [comp hour];
+    
+    // Format the string with hour int value
+    lastHourUpdated = [NSString stringWithFormat:@"%i",hour];
+    
+    return lastHourUpdated;
 }
 
 @end
