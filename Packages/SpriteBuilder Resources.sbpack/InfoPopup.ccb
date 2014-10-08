@@ -85,10 +85,10 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>320</real>
-							<real>515</real>
-							<integer>0</integer>
-							<integer>0</integer>
+							<real>2</real>
+							<real>4</real>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -137,6 +137,8 @@
 						<real>0.80000001192092896</real>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

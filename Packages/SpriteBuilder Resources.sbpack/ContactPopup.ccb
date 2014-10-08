@@ -85,10 +85,10 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>320</real>
-							<real>515</real>
-							<integer>0</integer>
-							<integer>0</integer>
+							<real>1</real>
+							<real>0.89999997615814209</real>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -219,10 +219,10 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>320</real>
-							<real>568</real>
-							<integer>0</integer>
-							<integer>0</integer>
+							<real>1.5</real>
+							<real>1.25</real>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -234,8 +234,8 @@
 						<array>
 							<real>0.0</real>
 							<real>0.0</real>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -1825,7 +1825,7 @@ EMAIL US: busybuapp@gmail.com</string>
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.079999998211860657</real>
+									<real>0.090000003576278687</real>
 									<real>0.44999998807907104</real>
 									<integer>0</integer>
 									<integer>2</integer>
@@ -1924,8 +1924,8 @@ EMAIL US: busybuapp@gmail.com</string>
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.20333333313465118</real>
-									<real>0.55000001192092896</real>
+									<real>0.19499999284744263</real>
+									<real>0.51999998092651367</real>
 									<integer>0</integer>
 									<integer>2</integer>
 									<integer>2</integer>
@@ -2131,7 +2131,7 @@ EMAIL US: busybuapp@gmail.com</string>
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.375</real>
+									<real>0.38499999046325684</real>
 									<real>0.44999998807907104</real>
 									<integer>0</integer>
 									<integer>2</integer>
@@ -2230,8 +2230,8 @@ EMAIL US: busybuapp@gmail.com</string>
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.5</real>
-									<real>0.55000001192092896</real>
+									<real>0.49500000476837158</real>
+									<real>0.51999998092651367</real>
 									<integer>0</integer>
 									<integer>2</integer>
 									<integer>2</integer>
@@ -2437,7 +2437,7 @@ EMAIL US: busybuapp@gmail.com</string>
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.66600000858306885</real>
+									<real>0.67500001192092896</real>
 									<real>0.44999998807907104</real>
 									<integer>0</integer>
 									<integer>2</integer>
@@ -2503,6 +2503,8 @@ EMAIL US: busybuapp@gmail.com</string>
 								<real>1</real>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -2536,8 +2538,8 @@ EMAIL US: busybuapp@gmail.com</string>
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.79666668176651001</real>
-									<real>0.55000001192092896</real>
+									<real>0.77499997615814209</real>
+									<real>0.51999998092651367</real>
 									<integer>0</integer>
 									<integer>2</integer>
 									<integer>2</integer>
@@ -2738,7 +2740,7 @@ EMAIL US: busybuapp@gmail.com</string>
 						<key>value</key>
 						<array>
 							<real>0.0</real>
-							<real>-0.25</real>
+							<real>0.0</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -2752,7 +2754,7 @@ EMAIL US: busybuapp@gmail.com</string>
 						<key>value</key>
 						<array>
 							<real>1</real>
-							<real>1.5</real>
+							<real>1</real>
 							<integer>2</integer>
 							<integer>2</integer>
 						</array>
@@ -2844,10 +2846,10 @@ EMAIL US: busybuapp@gmail.com</string>
 				<string>Size</string>
 				<key>value</key>
 				<array>
-					<real>300</real>
-					<real>250</real>
-					<integer>0</integer>
-					<integer>0</integer>
+					<real>1</real>
+					<real>0.89999997615814209</real>
+					<integer>2</integer>
+					<integer>2</integer>
 				</array>
 			</dict>
 			<dict>
