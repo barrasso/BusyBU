@@ -16,3 +16,6 @@ Color meanings:
 Green = Not busy
 Blue = Mildly busy
 Red = Busy
+
+Get it on the App Store:
+https://itunes.apple.com/us/app/busy-bu/id926125903?mt=8&ign-mpt=uo%3D4
